@@ -8,6 +8,8 @@
 <body>
 	<?php include 'includes/menu.php';?>
 
+	<p>Bienvenu chez nous !!!</p>
+
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>
 
