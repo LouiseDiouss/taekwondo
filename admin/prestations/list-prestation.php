@@ -38,6 +38,7 @@
     <title>Liste des prestations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <?php include '../../includes/css-links.html'?>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
     <?php include '../../includes/menu.php'; ?>
@@ -50,70 +51,76 @@
                     Ajouter une prestation
                 </a>
             </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nom</th>
-                        <th>Catégorie</th>
-                        <th>Jour</th>
-                        <th>Début</th>
-                        <th>Fin</th>
-                        <th>Etat</th>
-                        <th>Créée le</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php while ($data = $response->fetch()){ ?>
+            <div class="row">
+                <!--<div class="col-md-2"></div>-->
+                <div class="col-lg-12">
+                    <table class="table table-striped" id="prestations-list">
+                        <thead>
                         <tr>
-                            <td><?=$data['idCours']?></td>
-                            <td><?=$data['nom']?></td>
-                            <td><?=ucfirst($data['categorie']);?></td>
-                            <td><?=ucfirst($data['jour'])?></td>
-                            <td><?=$data['debut']?></td>
-                            <td><?=$data['fin']?></td>
-                            <td><?=($data['active'] == true)? 'Active': 'Désactivée';?></td>
-                            <td><?=date_format(new DateTime($data['date_creation']), "d/m/Y à H:m")?></td>
-
-                            <!-- Les buttons d'actions -->
-                            <td>
-                                <div class="btn-toolbar" role="toolbar" aria-label="">
-                                    <div class="btn-group mr-2" role="group">
-                                        <a role="button" class="btn btn-warning" title="Modifier"
-                                           href="edit-prestation.php?prestation=<?=$data['slug']?>">
-                                            <i class="fa fa-edit" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="btn-group mr-2" role="group">
-                                        <?php if ($data['active'] == true) {?>
-                                            <a role="button" class="btn btn-danger" title="Désactiver"
-                                               data-toggle="modal" data-target="#confirmModal"
-                                                onclick="getDisId('<?=$data['slug']?>')">
-                                                <i class="fa fa-ban" aria-hidden="true"></i>
-                                            </a>
-                                        <?php }else {?>
-                                            <a role="button" class="btn btn-success" title="Activer"
-                                               data-toggle="modal" data-target="#activationModal"
-                                                onclick="getEnId('<?=$data['slug']?>')">
-                                                <i class="fa fa-arrow-up" aria-hidden="true"></i>
-                                            </a>
-                                        <?php }?>
-
-                                    </div>
-                                    <div class="btn-group mr-2" role="group">
-                                        <a role="button" class="btn btn-info" title="Reservations"
-                                           href="#reservations">
-                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </td>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Catégorie</th>
+                            <th>Jour</th>
+                            <th>Début</th>
+                            <th>Fin</th>
+                            <th>Etat</th>
+                            <th>Créée le</th>
+                            <th>Actions</th>
                         </tr>
-                    <?php }?>
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                        <?php while ($data = $response->fetch()) { ?>
+                            <tr>
+                                <td><?= $data['idCours'] ?></td>
+                                <td><?= $data['nom'] ?></td>
+                                <td><?= ucfirst($data['categorie']); ?></td>
+                                <td><?= ucfirst($data['jour']) ?></td>
+                                <td><?= $data['debut'] ?></td>
+                                <td><?= $data['fin'] ?></td>
+                                <td><?= ($data['active'] == true) ? 'Active' : 'Désactivée'; ?></td>
+                                <td><?= date_format(new DateTime($data['date_creation']), "d/m/Y à H:m") ?></td>
+
+                                <!-- Les buttons d'actions -->
+                                <td>
+                                    <div class="btn-toolbar" role="toolbar" aria-label="">
+                                        <div class="btn-group mr-2" role="group">
+                                            <a role="button" class="btn btn-warning" title="Modifier"
+                                               href="edit-prestation.php?prestation=<?= $data['slug'] ?>">
+                                                <i class="fa fa-edit" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group">
+                                            <?php if ($data['active'] == true) { ?>
+                                                <a role="button" class="btn btn-danger" title="Désactiver"
+                                                   data-toggle="modal" data-target="#confirmModal"
+                                                   onclick="getDisId('<?= $data['slug'] ?>')">
+                                                    <i class="fa fa-ban" aria-hidden="true"></i>
+                                                </a>
+                                            <?php } else { ?>
+                                                <a role="button" class="btn btn-success" title="Activer"
+                                                   data-toggle="modal" data-target="#activationModal"
+                                                   onclick="getEnId('<?= $data['slug'] ?>')">
+                                                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                                                </a>
+                                            <?php } ?>
+
+                                        </div>
+                                        <div class="btn-group mr-2" role="group">
+                                            <a role="button" class="btn btn-info" title="Reservations"
+                                               href="#reservations">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<div class="col-md-2"></div>-->
+            </div>
         </div>
     </div>
 
@@ -171,6 +178,7 @@
 
     <?php include '../../includes/footer.php'; ?>
     <?php include '../../includes/js-links.html'; ?>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script>
         function getDisId(id) {
             document.getElementById('prest-dis-slug').value = id;
@@ -179,6 +187,10 @@
         function getEnId(id) {
             document.getElementById('prest-en-slug').value = id;
         }
+
+        $(document).ready( function () {
+            $('#prestations-list').DataTable();
+        } );
     </script>
 </body>
 </html>
