@@ -1,5 +1,4 @@
 <?php
-
 try {
 	$mysqlOptions = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8' );
 	$dataBase = new PDO('mysql:host=localhost;dbname=challenge_taekwondo', 'root', '', $mysqlOptions);
