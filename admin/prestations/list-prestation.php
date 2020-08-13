@@ -45,16 +45,18 @@
     <div class="container">
         <div class="row mt-3 mb-3">
             <div class="row mb-5" style="width: 100%">
-                <h2 class="">Liste des prestations</h2>
-                <a href="add-prestation.php" role="button" class="btn btn-primary pull-left">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                    Ajouter une prestation
-                </a>
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="">Liste des prestations</h2>
+                    <a href="add-prestation.php" role="button" class="btn btn-primary pull-left">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        Ajouter une prestation
+                    </a>
+                </div>
             </div>
             <div class="row">
                 <!--<div class="col-md-2"></div>-->
-                <div class="col-lg-12">
-                    <table class="table table-striped" id="prestations-list">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
+                    <table class="table table-striped display responsive no-wrap" id="prestations-list">
                         <thead>
                         <tr>
                             <th>Id</th>
