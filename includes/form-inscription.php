@@ -10,9 +10,8 @@
 
                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div-->
                             
-                     <form id="loginform" method="POST" action="controleur.php?action=inscription" class="form-horizontal" role="form" >
+                     <form id="loginform" method="POST"class="form-horizontal" role="form" >
                         <div class="container" style="margin:10% 8% 10% 8%;">
-
                             <div class='row' style="margin-bottom: 3%;">
                                 <div class="col-md-10">
                                     <div class="form-heading">
@@ -33,38 +32,39 @@
                                     <div class="col">
                                                 <label for="prenom">Prénom:</label>
                                                     <!-- <span class="input-group-addon" style="position: absolute;"><i class="glyphicon glyphicon-user"></i></span> -->
-                                                    <input id="prenom" type="text" class="form-control"  style="position: relative;"name="prenom" value="" placeholder=""required>
+                                                    <input id="prenom" type="text" class="form-control"  style="position: relative;" name="prenom" value="" placeholder=""required>
                                         <!--/div-->
                                     </div>
                                 </div>
 
                                  <div class="form-row">        
                                     <div class="col"> 
-                                            <label for="sexe">Genre:</label>
-                                                <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-                                                <select name="sexe" class="custom-select" id="inputGroupSelect01" required>
-                                                    <option selected></option>
-                                                    <option value="homme">Homme</option>
-                                                    <option value="frmme">Femme</option>
-                                                    <option value="autre">Autre</option>
-                                                </select>
-
+                                        <label for="sexe">Genre:</label>
+                                        <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+                                        <select name="sexe" class="custom-select" id="inputGroupSelect01" required>
+                                            <option selected>Genre</option>
+                                            <option value="homme">Homme</option>
+                                            <option value="femme">Femme</option>
+                                            <!--<option value="autre">Autre</option>-->
+                                        </select>
                                     </div>
 
-                                      
                                     <div class="col"> 
                                             <label for="dateNaissance">Date de Naissance:</label>
-                                                <!--span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span-->
-                                                <input id="dateNaissance" type="date" class="form-control" name="dateNaissance" value="" placeholder=""required>
-                                    
+                                            <!--span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span-->
+                                            <input id="dateNaissance" type="date" class="form-control" name="dateNaissance"
+                                                   placeholder="Date de naissance" required>
                                     </div>
                                     <div class="col"> 
-                                            <label for="LieuNaissance">Lieu de Naissance:</label>
-                                                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span> -->
-                                                    <input id="LieuNaissance" type="text" class="form-control" name="LieuNaissance" value="" placeholder="" required>
-                                        
+                                            <label for="LieuNaissance">Lieu de naissance:</label>
+                                            <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span> -->
+                                            <input id="LieuNaissance" type="text" class="form-control" name="lieuNaissance"
+                                                   placeholder="Lieu de naissance" required>
                                     </div>
-
+                                     <div class="col">
+                                         <label for="nationalite">Nationalité:</label>
+                                         <input type="text" class="form-control" name="nationalite" placeholder="Nationalité" />
+                                     </div>
                                 </div>
                             </fieldset>
                              <fieldset style="padding:0px 0px 20px 20px;margin-bottom:30px; border:1px solid #DF3F3F; width:83%;">
@@ -116,7 +116,7 @@
                                     </div> 
                                     <div class="col"> 
                                         <label for="pass2"> confirmer mp:</label> 
-                                        <input id="pass2" type="password" class="form-control" name="pass2" value="" placeholder="confirmer Mot de passe" required> 
+                                        <input id="pass2" type="password" class="form-control" name="confirm-password" value="" placeholder="confirmer Mot de passe" required>
                                     </div> 
                                 </div>
                              </fieldset>
@@ -131,7 +131,7 @@
                                     <div class="col"> 
                                             <label for="passeportSportif">Passeport Sportif:</label>
                                                     <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span> -->
-                                                    <input id="passeportSportif" type="text" class="form-control" name="numLicence" value="" placeholder="" required>
+                                                    <input id="passeportSportif" type="text" class="form-control" name="pass-sport" value="" placeholder="" required>
                                     </div>
                                 </div>
                              </fieldset>
@@ -146,8 +146,8 @@
 
                                         <div class="col-sm-12 controls">
 
-                                          <button class="btn btn-lg btn-primary" name="demandeInscription"type="submit" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F;margin-right: 5%;">S'inscrire</button>  
-                                          <a id="btn-fblogin" href="index.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; ">ANNULER</a>
+                                          <button class="btn btn-lg btn-primary" name="demandeInscription" type="submit" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F;margin-right: 5%;">S'inscrire</button>
+                                          <a id="btn-fblogin" href="../index.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; ">ANNULER</a>
 
                                         </div>
                                     </div>

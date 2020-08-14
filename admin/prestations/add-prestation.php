@@ -39,12 +39,12 @@
     <?php //include ROOT.'/includes/menu.php'; ?>
     <div class="container">
         <div class="row mt-5 mb-5">
-            <div class="col-md-2">
+            <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
                 <a role="button" href="list-prestation.php" class="btn btn-outline-primary" >
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 </a>
             </div>
-            <div class="col-md-8">
+            <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-xl-8">
                 <h2>Création d'une prestation</h2>
                 <?php if (isset($msg)){?>
                 <p class="alert alert-<?=key($msg)?>">
@@ -61,7 +61,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2"></div>
         </div>
     </div>
     <?php include '../../includes/footer.php'; ?>
