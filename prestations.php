@@ -1,9 +1,12 @@
 <?php
+    session_start();
     require_once 'proccess/config.php';
 
     $str = 'SELECT idCours, slug, nom, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
             FROM prestation WHERE active = true ';
     $response = $dataBase->query($str);
+
+    //var_dump($_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PROTOCOL']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,7 +27,7 @@
             </div>
             <br>
             <div class="row mt-3">
-                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+                <!--<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">-->
                     <?php while ($data = $response->fetch()) { ?>
                         <div class="card mr-2 mb-2" style="width: 16rem;">
                             <div class="card-body">
@@ -40,7 +43,7 @@
                             </div>
                         </div>
                     <?php } ?>
-                </div>
+               <!-- </div>-->
             </div>
         </div>
     </div>

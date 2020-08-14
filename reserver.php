@@ -2,6 +2,7 @@
     session_start();
     require_once 'proccess/config.php';
     require_once 'proccess/generateReservationNumber.php';
+    require_once 'proccess/mailer.php';
 
     /*if (!$_SESSION['profil']){
         header('Location: /');
@@ -29,6 +30,11 @@
             $res = $insertReq->execute(array(1, 2, $number));
 
             if ($res){
+                /* Envoi du mail */
+                $subject = 'Votre reservation';
+                $contenu = "Votre reservation pour le ".$reservation['jour']." à ".$reservation['debut']." à bien été prise en compte";
+                sendMail('sylvanus010@gmail.com', $subject, $contenu, $contenu);
+
                 $msg = ['success' => 'Reservation effectuée avec succès. Vous recevrai un e-mail.'];
             }else{
                 $msg = ['danger' => 'Une erreur s\'est produite.'];
