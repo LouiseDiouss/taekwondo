@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="/taekwondo"><img src="assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
+  <a class="navbar-brand" href="/tc"><img src="/assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,22 +25,30 @@
         <a class="nav-link" href="galerie.php">Galerie</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="prestations.php">Prestations</a>
+        <a class="nav-link" href="/prestations.php">Prestations</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#boutique.php">Boutique</a>
       </li>
     </ul>
-    <ul class="navbar-text">
-      <!--li class="nav-item"-->
-        <a  id="btn-fblogin" href="Inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> | 
-        <!--class="nav-link" href="inscription.php" role="button">S'inscrire</a-->
-      <!--/li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-default" href="connexion.php" role="button">Se connecterstyle="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; </a-->
-        <a id="btn-fblogin" href="index.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
-      <!--/li-->
-    </ul>
-      
+      <?php if (!isset($_SESSION['profil'])){?>
+        <ul class="navbar-text">
+          <!--li class="nav-item"-->
+            <a  id="btn-fblogin" href="../inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> |
+            <!--class="nav-link" href="inscription.php" role="button">S'inscrire</a-->
+          <!--/li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default" href="connexion.php" role="button">Se connecterstyle="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; </a-->
+            <a id="btn-fblogin" href="../login.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
+          <!--/li-->
+        </ul>
+      <?php }else{ ?>
+      <div class="navbar-text">
+          <a href="../mon-espace.php" class="btn btn-success" role="button">Espace membre</a>
+          <a href="../logout.php" class="btn btn-warning" role="button">
+              <i class="fa fa-power-off" aria-hidden="true"></i>
+          </a>
+      </div>
+      <?php } ?>
   </div>
 </nav>
