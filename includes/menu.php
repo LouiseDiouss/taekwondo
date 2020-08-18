@@ -32,12 +32,12 @@
     </ul>
     <ul class="navbar-text">
       <!--li class="nav-item"-->
-        <a  id="btn-fblogin" href="Inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> | 
+        <a  id="btn-fblogin" href="inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> | 
         <!--class="nav-link" href="inscription.php" role="button">S'inscrire</a-->
       <!--/li>
       <li class="nav-item">
         <a class="nav-link btn btn-default" href="connexion.php" role="button">Se connecterstyle="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; </a-->
-        <a id="btn-fblogin" href="index.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
+        <a id="btn-fblogin" href="loginForm.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
       <!--/li-->
     </ul>
       
