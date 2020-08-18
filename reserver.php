@@ -27,13 +27,13 @@
             $insert = 'INSERT INTO reserver(idCours, idUser, numResa, date_heure_resa)
                         VALUES (?,?,?,NOW())';
             $insertReq = $dataBase->prepare($insert);
-            $res = $insertReq->execute(array(1, 2, $number));
+            $res = $insertReq->execute(array($reservation['idCours'], $_SESSION['idUser'], $number));
 
             if ($res){
                 /* Envoi du mail */
                 $subject = 'Votre reservation';
                 $contenu = "Votre reservation pour le ".$reservation['jour']." à ".$reservation['debut']." à bien été prise en compte";
-                sendMail('sylvanus010@gmail.com', $subject, $contenu, $contenu);
+                sendMail($_SESSION['email'], $subject, $contenu, $contenu);
 
                 $msg = ['success' => 'Reservation effectuée avec succès. Vous recevrai un e-mail.'];
             }else{
