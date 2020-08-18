@@ -31,6 +31,7 @@
         <a class="nav-link" href="#boutique.php">Boutique</a>
       </li>
     </ul>
+
       <?php if (!isset($_SESSION['profil'])){?>
         <ul class="navbar-text">
           <!--li class="nav-item"-->
@@ -50,5 +51,6 @@
           </a>
       </div>
       <?php } ?>
+
   </div>
 </nav>
