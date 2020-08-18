@@ -38,8 +38,13 @@
                                 <p class="card-text text-center"><?= $data['debut'] . ' - ' . $data['fin']; ?></p>
                             </div>
                             <div class="card-footer text-center">
-                                <a href="reserver.php?prestation=<?= $data['slug']; ?>"
-                                   class="card-link btn btn-primary">Reserver</a>
+                                <?php if (isset($_SESSION['profil'])){?>
+                                <button onclick="window.location.href='reserver.php?prestation=<?= $data['slug']; ?>'"
+                                   class="card-link btn btn-primary">Reserver</button>
+                                <?php } else{?>
+                                <button onclick="window.location.href='login.php'"
+                                   class="card-link btn btn-primary">Reserver</button>
+                                <?php }?>
                             </div>
                         </div>
                     <?php } ?>
