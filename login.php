@@ -16,6 +16,7 @@
                 $user = $request->fetch();
 
                 if (password_verify($pwd, $user['password'])) {
+                    $_SESSION['idUser'] = $user['idUser'];
                     $_SESSION['slug'] = $user['slug'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['password'] = $user['password'];

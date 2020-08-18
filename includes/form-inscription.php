@@ -10,7 +10,7 @@
 
                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div-->
                             
-                     <form id="loginform" method="POST"class="form-horizontal" role="form" >
+                     <form id="loginform" method="POST" class="form-horizontal" role="form" >
                         <div class="container" style="margin:10% 8% 10% 8%;">
                             <div class='row' style="margin-bottom: 3%;">
                                 <div class="col-md-10">
