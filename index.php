@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start();
 	require 'proccess/config.php';
  ?>
 <!DOCTYPE html>
