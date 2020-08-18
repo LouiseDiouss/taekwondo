@@ -1,0 +1,96 @@
+<?php
+    session_start();
+    require_once '../proccess/config.php';
+
+    /*if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }*/
+
+    if (isset($_POST['param'])){
+        $nom = htmlspecialchars($_POST['ets-nom']);
+        $adress = htmlspecialchars($_POST['ets-adress']);
+        $cp = htmlspecialchars($_POST['ets-cp']);
+        $ville = htmlspecialchars($_POST['ets-ville']);
+        $siege = htmlspecialchars($_POST['ets-siege']);
+        $phone = htmlspecialchars($_POST['ets-tel']);
+        $email = htmlspecialchars($_POST['ets-email']);
+        $face = htmlspecialchars($_POST['ets-facebook']);
+        $twitter = htmlspecialchars($_POST['ets-twitter']);
+        $insta = htmlspecialchars($_POST['ets-instagram']);
+        $snap = htmlspecialchars($_POST['ets-snap']);
+
+        if (!empty($nom) && !empty($adress) && !empty($cp) && !empty($ville) && !empty($siege)
+        && !empty($phone) && !empty($email) && !empty($face) && !empty($twitter) && !empty($insta) && !empty($snap)){
+            $insert = 'INSERT INTO parametres() VALUES(UUID(), ?, ?, ?, ?, ?, ?, ?, true, NOW(), ?, ?, ?, ?)';
+
+            $request = $dataBase->prepare($insert);
+
+            $request->execute(array($nom, $adress, $cp, $ville, $phone, $email, $siege, $face, $twitter, $insta, $snap));
+
+            $msg = ['success' => 'Paramètres définies avec succes.'];
+        }else{
+            $msg = ['warning' => 'Veuillez renseigner tous les champs obligatoires.'];
+        }
+
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Paramètres du site - Taekwondo Challenge</title>
+    <?php include '../includes/css-links.html';?>
+</head>
+<body>
+    <?php include 'includes/menu-admin.php';?>
+    <div class="container">
+        <h2 class="text-center mt-2">Paramètres du site</h2>
+        <?php if (isset($msg)){?>
+            <p class="alert alert-<?=key($msg)?>">
+                <?=$msg[key($msg)]?>
+            </p>
+        <?php }?>
+        <div class="col-md-12">
+            <?php include 'includes/_form-param.php';?>
+            <div class="form-group mt-2">
+                <input type="submit" class="btn btn-primary" value="Enregistrer les paramètres" name="param"/>
+            </div>
+        </div>
+    </div>
+
+    <?php include '../includes/js-links.html';?>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('*').click(function () {
+                $('#suggest-adress').html('');
+            });
+
+            $('#ets-adress').keyup(function (e) {
+                var value = $('#ets-adress').val().replace(/ /g, '+');
+                $.ajax({
+                    url: 'https://api-adresse.data.gouv.fr/search/?q='+value+'&limit=30',
+                    success: function(data){
+                        $('#suggest-adress').html('');
+                        data.features.forEach((item, index) => {
+                            $('#suggest-adress')
+                                .append('<li id="address-'+index+'" data-rue="'+item.properties.name+'" ' +
+                                    'data-code="'+item.properties.postcode+'" data-ville="'+item.properties.city+'" ' +
+                                    'class="list-group-item list-group-item-action">'+item.properties.label+'</li>')
+                        });
+                    }
+                });
+            });
+
+            $('#suggest-adress').on('click', '.list-group-item', function() {
+                $('#ets-adress').val( $(this).attr('data-rue') );
+                $('#ets-cp').val( $(this).attr('data-code') );
+                $('#ets-ville').val( $(this).attr('data-ville') );
+                $('#suggest-adress').html('');
+            });
+        })
+    </script>
+</body>
+</html>
