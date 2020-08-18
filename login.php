@@ -1,6 +1,12 @@
 <?php
     session_start();
     require_once 'proccess/config.php';
+
+    // Rediriger l'utilisateur sur la page d'accueil s'il est déjà connecté...
+    if (isset($_SESSION['profil'])){
+        header('location: /');
+    }
+
     if (isset($_POST['connexion'])){
         $email = htmlspecialchars($_POST['email']);
         $pwd = $_POST['password'];
