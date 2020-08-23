@@ -17,7 +17,8 @@
     /* Fin désactivation */
 
     /* Réactivation d'un prestation */
-    if (isset($_POST['confirm-en'])){
+    if (isset($_POST['confirm-en']))
+    {
         $enSlug = htmlspecialchars($_POST['prest-en-slug']);
 
         if (!empty($enSlug)){

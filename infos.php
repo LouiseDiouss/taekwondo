@@ -67,7 +67,7 @@
 			<table class="table" style="margin-bottom: 15%;">
 				  <thead class="thead-dark">
 				  	<tr>
-				    	<th scope="col" colspan="5" class="cours">NOS COURS</th>
+				    	<th scope="col" colspan="6" class="cours">NOS COURS</th>
 				   
 				    </tr>
 				    <tr>

@@ -33,6 +33,7 @@
     <meta charset="UTF-8">
     <title>Ajouter une prestation</title>
     <?php include '../../includes/css-links.html'; ?>
+     <link rel="stylesheet" href="../../includes/style.css">
 </head>
 <body>
     <?php include '../../includes/menu.php'; ?>

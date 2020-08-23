@@ -12,14 +12,12 @@
 	    $objet = htmlspecialchars($_POST['objet']);
 	    $message=htmlspecialchars($_POST['message']);
 
-
-	    if (!empty($nom) && !empty($prenom) && !empty($email) && !empty($objet) &&
-        !empty($message))
+	    if (!empty($nom) && !empty($prenom) && !empty($email) && !empty($objet) && !empty($message))
         {
-        	 $insert = 'INSERT INTO contact(slug, nom,prenom, objet,email,message,dateContact)
+        	 $insert = 'INSERT INTO contact(slug, nom,prenom,email, objet,message,dateContact)
                                 VALUES(UUID(),?,?,?,?,?,NOW())';
               $request = $dataBase->prepare($insert);
-              $resultat=$request->execute(array($nom, $prenom,$objet,$email,$message));
+              $resultat=$request->execute(array($nom,$prenom,$email,$objet,$message));
               if ($resultat){
                         /* Envoi du mail */
                        
@@ -52,7 +50,7 @@
 	<title>Accueil - Taekwondo Challenge</title>
 	<?php include 'includes/css-links.html';?>
 	<!--?php include 'includes/style.css';?-->
-	<!--link href="./assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /-->
+	<link href="./assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="//fonts.googleapis.com/css?family=Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 </head>
