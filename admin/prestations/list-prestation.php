@@ -17,7 +17,8 @@
     /* Fin désactivation */
 
     /* Réactivation d'un prestation */
-    if (isset($_POST['confirm-en'])){
+    if (isset($_POST['confirm-en']))
+    {
         $enSlug = htmlspecialchars($_POST['prest-en-slug']);
 
         if (!empty($enSlug)){
@@ -38,6 +39,7 @@
     <title>Liste des prestations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <?php include '../../includes/css-links.html'?>
+    <link rel="stylesheet" href="../../includes/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
@@ -46,7 +48,7 @@
         <div class="row mt-3 mb-3">
             <div class="row mb-5" style="width: 100%">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="">Liste des prestations</h2>
+                    <!--h2 class="">Liste des prestations</h2-->
                     <a href="add-prestation.php" role="button" class="btn btn-primary pull-left">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                         Ajouter une prestation
@@ -57,7 +59,11 @@
                 <!--<div class="col-md-2"></div>-->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
                     <table class="table table-striped display responsive no-wrap" id="prestations-list">
-                        <thead>
+                        <thead class="thead-dark">
+                            <tr>
+                        <th scope="col" colspan="9" class="cours" style="background-color: grey;">Liste des prestations</th>
+                   
+                    </tr>
                         <tr>
                             <th>Id</th>
                             <th>Nom</th>

@@ -19,7 +19,7 @@
 			<div class="w3ls_gallery_grids">
 				<div class="col-md-4 w3_agile_gallery_grid">
 					<div class="agile_gallery_grid">
-						<a title="groupe." href="assets/media/images/groupe.jpg">
+						<a title="groupe." href="/taekwondo/assets/media/images/groupe.jpg">
 							<div class="agile_gallery_grid1">
 								<img src="assets/media/images/groupe.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_gallery_grid1_pos">
@@ -131,13 +131,22 @@
 		</div>
 	</div>
 <!-- //gallery -->
-
-
+<?php include 'includes/js-links.html';?>
+<!-- //gallery -->
+	<script src="assets/js/simpleLightbox.js"></script>
+	<script>
+		$('.w3_agile_gallery_grid a').simpleLightbox();
+	</script>
+<!-- footer -->
+	
 	<!--fin galerie -->
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	
+
+
+
 
 
 	
