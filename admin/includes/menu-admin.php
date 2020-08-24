@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: sylvanus
- * Date: 18/08/20
- * Time: 13:14
- */
-?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="/admin/accueil.php"><img src="/assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
 
@@ -26,10 +18,11 @@
                 <a class="nav-link" href="/admin/reservations/list-reservation.php">Reservations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contacts/list-contact.php">Messages de contacts</a>
+
+                <a class="nav-link" href="../contacts/list-contact.php">Messages de contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin/users/list-user.php">Utilisateurs</a>
+                <a class="nav-link" href="../users/list-users.php">Utilisateurs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/parametres.php">Paramètres</a>
@@ -46,4 +39,4 @@
             </a>
         </div>
     </div>
-</nav>
+  </nav>
