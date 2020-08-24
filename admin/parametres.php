@@ -19,9 +19,13 @@
         $insta = htmlspecialchars($_POST['ets-instagram']);
         $snap = htmlspecialchars($_POST['ets-snap']);
 
+        //echo $adress, $cp, $ville;die();
+
         if (!empty($nom) && !empty($adress) && !empty($cp) && !empty($ville) && !empty($siege)
-        && !empty($phone) && !empty($email) && !empty($face) && !empty($twitter) && !empty($insta) && !empty($snap)){
-            $insert = 'INSERT INTO parametres() VALUES(UUID(), ?, ?, ?, ?, ?, ?, ?, true, NOW(), ?, ?, ?, ?)';
+        && !empty($phone) && !empty($email)){
+            $insert = 'INSERT INTO parametres(ets_slug, ets_nom, ets_adresse, ets_code_postal, ets_ville, ets_telephone, 
+                      ets_email, ets_siege_social, ets_est_active, ets_date_ajout_param, ets_facebook, ets_twitter, ets_instagram, ets_snapchat) 
+                      VALUES(UUID(), ?, ?, ?, ?, ?, ?, ?, true, NOW(), ?, ?, ?, ?)';
 
             $request = $dataBase->prepare($insert);
 
@@ -53,25 +57,27 @@
             </p>
         <?php }?>
         <div class="col-md-12">
+            <form method="post">
             <?php include 'includes/_form-param.php';?>
             <div class="form-group mt-2">
                 <input type="submit" class="btn btn-primary" value="Enregistrer les paramètres" name="param"/>
             </div>
+            </form>
         </div>
     </div>
 
     <?php include '../includes/js-links.html';?>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('*').click(function () {
+            $("*").click(function () {
                 $('#suggest-adress').html('');
             });
 
             $('#ets-adress').keyup(function (e) {
                 var value = $('#ets-adress').val().replace(/ /g, '+');
                 $.ajax({
-                    url: 'https://api-adresse.data.gouv.fr/search/?q='+value+'&limit=30',
+                    url: 'https://api-adresse.data.gouv.fr/search/?q='+value+'&limit=15',
                     success: function(data){
                         $('#suggest-adress').html('');
                         data.features.forEach((item, index) => {

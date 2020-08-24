@@ -1,11 +1,11 @@
 <?php
     session_start();
     require_once '../../proccess/config.php';
-    $token = base64_encode(openssl_random_pseudo_bytes(32));
+    /*$token = base64_encode(openssl_random_pseudo_bytes(32));
     echo 'token 1 : ',$token;
 
     $token2 = substr(md5(uniqid()),0 ,32);
-    echo ' token 2: ',$token2;
+    echo ' token 2: ',$token2;*/
 
     $request = $dataBase->query('SELECT * FROM reserver');
     //$response = $request->fetch();
@@ -20,12 +20,12 @@
     <?php include '../../includes/css-links.html';?>
 </head>
 <body>
-    <?php include '../../includes/menu.php';?>
-    <div class="row">
-        <div class="col-md-3">
-            <?php include '../includes/menu-admin.php'; ?>
-        </div>
-        <div class="col-md-9">
+<?php include '../includes/menu-admin.php'; ?>
+    <div class="container">
+        <!--<div class="col-md-3">
+            <?php /*include '../includes/menu-admin.php'; */?>
+        </div>-->
+        <div class="col-md-12">
             <table class="table">
                 <thead>
                 <tr>

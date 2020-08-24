@@ -2,9 +2,9 @@
     session_start();
     require_once '../proccess/config.php';
 
-    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+    /*if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
         header('location: /');
-    }
+    }*/
 
 ?>
 
