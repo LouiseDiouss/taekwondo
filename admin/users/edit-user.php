@@ -41,16 +41,16 @@
         <link rel="stylesheet" href="../../includes/style.css">
     </head>
     <body>
-        <?php include '../../includes/menu.php'; ?>
+        <?php include '../includes/menu-admin.php'; ?>
         <div class="container">
             <div class="row mt-5 mb-5">
                 <div class="col-md-2">
-                    <a role="button" href="list-user.php" class="btn btn-outline-primary" >
+                    <a role="button" href="list-users.php" class="btn btn-outline-primary" >
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div class="col-md-8">
-                    <h2>Modification d'une user</h2>
+                    <h2>Modification d'un utilisateur</h2>
                     <?php if (isset($msg)){?>
                         <p class="alert alert-<?=key($msg)?>">
                             <?=$msg[key($msg)]?>
@@ -61,7 +61,7 @@
                         <div class="form-group mt-3">
                             <button class="btn btn-warning" type="submit" name="edit-prest">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                Modifier la user
+                                Modifier l'utilisateur
                             </button>
 .                        </div>
                     </form>
@@ -73,6 +73,3 @@
         <?php include '../../includes/js-links.html'; ?>
     </body>
 </html>
-
-<?php //print $user['slug'].'et id = '.$user['idCours'];?>
-<?php //print_r($user['slug']);?>

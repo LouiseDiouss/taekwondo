@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
-    <?php include '../../includes/menu.php'; ?>
+    <?php include '../includes/menu-admin.php'; ?>
     <div class="container">
         <div class="row mt-3 mb-3">
             

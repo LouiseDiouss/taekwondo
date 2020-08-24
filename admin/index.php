@@ -57,7 +57,6 @@
 <body>
     
     <div class="">
-<<<<<<< HEAD
         <div class="">
             <?php include 'includes/menu-admin.php'; ?>
         </div>
@@ -69,7 +68,7 @@
 
             </div>d
         </div-->
-=======
+
         <div class="row">
             <div class="col-md-1"><!-- Colonne gauche --></div>
             <div class="col-md-10">
@@ -77,7 +76,7 @@
             </div>
             <div class="col-md-1"><!-- Colonne droite --></div>
         </div>
->>>>>>> 1f19fa4eb9d85e58aa92f97e9d270c2808e20358
+
     </div>
     <?php include '../includes/footer.php';?>
 </body>
