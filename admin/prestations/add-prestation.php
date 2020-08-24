@@ -36,7 +36,7 @@
      <link rel="stylesheet" href="../../includes/style.css">
 </head>
 <body>
-    <?php include '../../includes/menu.php'; ?>
+    <?php include '../includes/menu-admin.php'; ?>
     <?php //include ROOT.'/includes/menu.php'; ?>
     <div class="container">
         <div class="row mt-5 mb-5">

@@ -115,7 +115,7 @@
                                         </div>
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-info" title="Reservations"
-                                               href="#reservations">
+                                               href="list-reservation-prestation.php?prestation=<?= $data['slug'] ?>">
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
                                         </div>

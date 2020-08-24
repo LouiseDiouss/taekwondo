@@ -7,6 +7,6 @@
     <?php include '../../includes/css-links.html';?>
 </head>
 <body>
-    <?php include '../../includes/menu.php';?>
+    <?php include '../includes/menu-admin.php'; ?>
 </body>
 </html>

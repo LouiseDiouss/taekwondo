@@ -1,11 +1,11 @@
 <?php
     session_start();
     require_once '../../proccess/config.php';
-    $token = base64_encode(openssl_random_pseudo_bytes(32));
+    /*$token = base64_encode(openssl_random_pseudo_bytes(32));
     echo 'token 1 : ',$token;
 
     $token2 = substr(md5(uniqid()),0 ,32);
-    echo ' token 2: ',$token2;
+    echo ' token 2: ',$token2;*/
 
     $request = $dataBase->query('SELECT * FROM reserver');
     //$response = $request->fetch();
@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
-    <?php include '../../includes/menu.php';?>
+
+    <?php include '../includes/menu-admin.php';?>
 
     <div class="container">
         <!--div class="col-md-3"-->
