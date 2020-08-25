@@ -1962,7 +1962,7 @@ h2.typoh2{
         /*padding:0px 190px 0px 100px;*/
         /*padding:0px auto 0px auto;*/
         margin:0px auto 0px auto;
-        text-align: ;
+        /*text-align: ;*/
         line-height: 1.5em;
         font-family: Arial, Helvetica, sans-serif;
         /*font-family: Times New Roman;*/
@@ -2036,7 +2036,7 @@ h2.typoh2{
 .reservation p
 {
     font-size:23px;
-    text-align:normal;
+    text-align: initial;
 }
 /*--//reservation --*/
 /*-- start-responsive-design --*/

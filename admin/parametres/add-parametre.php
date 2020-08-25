@@ -1,10 +1,10 @@
 <?php
     session_start();
-    require_once '../proccess/config.php';
+    require_once '../../proccess/config.php';
 
-    /*if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
         header('location: /');
-    }*/
+    }
 
     if (isset($_POST['param'])){
         $nom = htmlspecialchars($_POST['ets-nom']);
@@ -45,10 +45,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Paramètres du site - Taekwondo Challenge</title>
-    <?php include '../includes/css-links.html';?>
+    <?php include '../includes/css-admin.html';?>
 </head>
 <body>
-    <?php include 'includes/menu-admin.php';?>
+    <?php include '../includes/menu-admin.php';?>
     <div class="container">
         <h2 class="text-center mt-2">Paramètres du site</h2>
         <?php if (isset($msg)){?>
@@ -58,7 +58,7 @@
         <?php }?>
         <div class="col-md-12">
             <form method="post">
-            <?php include 'includes/_form-param.php';?>
+            <?php include '../includes/_form-param.php';?>
             <div class="form-group mt-2">
                 <input type="submit" class="btn btn-primary" value="Enregistrer les paramètres" name="param"/>
             </div>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <?php include '../includes/js-links.html';?>
+    <?php include '../includes/js-admin.html';?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {

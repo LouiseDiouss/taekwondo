@@ -38,32 +38,38 @@
     <meta charset="UTF-8">
     <title>Liste des prestations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <?php include '../../includes/css-links.html'?>
+    <?php include '../includes/css-admin.html'?>
     <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap4.min.css">
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>
     <div class="container">
-        <div class="row mt-3 mb-3">
+        <div class="row mt-3 mb-3 justify-content-md-center">
             <div class="row mb-5" style="width: 100%">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                     <!--h2 class="">Liste des prestations</h2-->
-                    <a href="add-prestation.php" role="button" class="btn btn-primary pull-left">
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        Ajouter une prestation
-                    </a>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-9">
+                            <a href="add-prestation.php" role="button" class="btn btn-primary">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                Ajouter une prestation
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <!--<div class="col-md-2"></div>-->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
-                    <table class="table table-striped display responsive no-wrap" id="prestations-list">
+                    <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;" id="prestations-list">
                         <thead class="thead-dark">
-                            <tr>
+                            <!--<tr>
                         <th scope="col" colspan="9" class="cours" style="background-color: grey;">Liste des prestations</th>
                    
-                    </tr>
+                    </tr>-->
                         <tr>
                             <th>Id</th>
                             <th>Nom</th>
@@ -185,19 +191,50 @@
     <!-- Fin modal de confirmation de désactivation -->
 
     <?php include '../../includes/footer.php'; ?>
-    <?php include '../../includes/js-links.html'; ?>
+    <?php include '../includes/js-admin.html'; ?>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap4.min.js"></script>
     <script>
+        /**
+         * Script pour recupérer le slug de la prestation à désactiver
+         * @param id
+         */
         function getDisId(id) {
+            // Place la valeur du slug dans le champ caché du form sur la modal de confirmation
             document.getElementById('prest-dis-slug').value = id;
         }
 
+        /**
+         * Script pour récupérer le slug de la prestation à réactiver
+         * @param id
+         */
         function getEnId(id) {
+            // Place la valeur du slug dans le champ caché du form sur la modal de confirmation
             document.getElementById('prest-en-slug').value = id;
         }
 
+        /**
+         * Chargement du datatable
+         */
         $(document).ready( function () {
-            $('#prestations-list').DataTable();
+            $('#prestations-list').DataTable({
+                "language": {
+                    "search": "Rechercher: ",
+                    "lengthMenu": "Montrer  _MENU_  r&eacute;sultats par page",
+                    "zeroRecords": "Aucun r&eacute;sultat trouv&eacute; ",
+                    "info": "Page _PAGE_ sur _PAGES_",
+                    "infoEmpty": "Aucun r&eacute;sultat",
+                    "infoFiltered": "(filtré de _MAX_ total records)",
+                    "paginate": {
+                        "first":      "Premier",
+                        "previous":   "Pr&eacute;c&eacute;dent",
+                        "next":       "Suivant",
+                        "last":       "Dernier"
+                    },
+                }
+            });
         } );
     </script>
 </body>

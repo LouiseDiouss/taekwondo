@@ -2,8 +2,8 @@
     session_start();
     require_once '../proccess/config.php';
 
-    if (isset($_SESSION['profil']) && $_SESSION['profil'] != 'ROLE_ADMIN'){
-        header('Location: /');
+    if (isset($_SESSION['profil']) && $_SESSION['profil'] == 'ROLE_ADMIN'){
+        header('Location: /admin/accueil.php');
     }
 
     if (isset($_POST['connexion'])){
@@ -30,7 +30,7 @@
 
                     $dataBase->prepare("UPDATE admin SET last_login = NOW() WHERE slug = ?")->execute([$admin['slug']]);
 
-                    header('Location: accueil.php');
+                    header('Location: admin/accueil.php');
 
                 } else {
                     $msg = array('danger' => 'Email et/ou mot de passe incorrects.');
@@ -52,32 +52,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Administration - Taekwondo Challenge</title>
     <?php include './../includes/css-links.html';?>
-    <link rel="stylesheet" href="./../includes/style.css">
 </head>
 <body>
     
-    <div class="">
-        <div class="">
-            <?php include 'includes/menu-admin.php'; ?>
-        </div>
-        <!--div class="row">
-            <div class="col-md-3"-->
-                <!--?php include 'includes/menu-admin.php'; ?>
-            </div>
-            <div class="col-md-9">
-
-            </div>d
-        </div-->
-
-        <div class="row">
-            <div class="col-md-1"><!-- Colonne gauche --></div>
-            <div class="col-md-10">
+    <div class="container">
+        <div class="row align-items-center">
+            <!--<div class="col-md-1">-- Colonne gauche --</div>-->
+            <div class="col-md-4 ml-auto mr-auto mt-md-5" style="box-shadow: 10px 10px 10px grey; background-color: #DADADA">
+                <h2 class="text-center mb-4 mt-2">Connexion</h2>
                 <?php include '../includes/form-login.php';?>
             </div>
-            <div class="col-md-1"><!-- Colonne droite --></div>
+            <!--<div class="col-md-1"> Colonne droite </div>-->
         </div>
-
     </div>
-    <?php include '../includes/footer.php';?>
 </body>
 </html>

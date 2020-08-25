@@ -78,6 +78,3 @@
         <?php include '../../includes/js-links.html'; ?>
     </body>
 </html>
-
-<?php //print $prestation['slug'].'et id = '.$prestation['idCours'];?>
-<?php //print_r($prestation['slug']);?>
