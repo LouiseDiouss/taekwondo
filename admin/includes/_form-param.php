@@ -3,36 +3,36 @@
 ?>
 
 <div class="form-group">
-    <label for="ets-nom">Nom entreprise</label>
-    <input type="text" class="form-control" name="ets-nom" id="ets-nom"/>
+    <label for="ets-nom">Nom entreprise <abbr title="Obligatoire" style="color: red">*</abbr></label>
+    <input type="text" class="form-control" name="ets-nom" id="ets-nom" required/>
 </div>
 <div class="row">
     <div class="col">
-        <label for="ets-adress">Adresse</label>
-        <input type="text" class="form-control" name="ets-adress" id="ets-adress"/>
+        <label for="ets-adress">Adresse <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="text" class="form-control" name="ets-adress" id="ets-adress" required/>
         <ul id="suggest-adress" class="list-group"></ul>
     </div>
     <div class="col">
-        <label for="ets-cp">Code postal</label>
-        <input type="text" class="form-control" name="ets-cp" id="ets-cp"/>
+        <label for="ets-cp">Code postal <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="text" class="form-control" name="ets-cp" id="ets-cp" required/>
     </div>
     <div class="col">
-        <label for="ets-ville">Ville</label>
-        <input type="text" class="form-control" name="ets-ville" id="ets-ville"/>
+        <label for="ets-ville">Ville <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="text" class="form-control" name="ets-ville" id="ets-ville" required/>
     </div>
 </div>
 <div class="row">
     <div class="col">
-        <label for="ets-siege">Siège social</label>
-        <input type="text" class="form-control" name="ets-siege" id="ets-siege"/>
+        <label for="ets-siege">Siège social <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="text" class="form-control" name="ets-siege" id="ets-siege" required/>
     </div>
     <div class="col">
-        <label for="ets-tel">Téléphone</label>
-        <input type="text" class="form-control" name="ets-tel" id="ets-tel"/>
+        <label for="ets-tel">Téléphone <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="text" class="form-control" name="ets-tel" id="ets-tel" required/>
     </div>
     <div class="col">
-        <label for="ets-email">Email</label>
-        <input type="email" class="form-control" name="ets-email" id="ets-email"/>
+        <label for="ets-email">Email <abbr title="Obligatoire" style="color: red">*</abbr></label>
+        <input type="email" class="form-control" name="ets-email" id="ets-email" required/>
     </div>
 </div>
 <!-- Reseaux sociaux -->

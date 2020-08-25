@@ -1,84 +1,5 @@
-<?php
-
-?>
-<<<<<<< HEAD
-<!--nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Prestations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="admin/reservations/list-reservation.php">Reservations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contacts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Utilisateurs</a>
-      </li>
-    </ul>
-</nav-->
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="">
-  <a class="navbar-brand" href="/taekwondo"><img src="/taekwondo/assets/media/images/logo.png"  width="100px" height="90px" alt="Taekwondo-Challenge-logo"></a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <!--img src=".\images\logo.png"-->
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/taekwondo/index.php">Accueil <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Le club
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/taekwondo/presentation.php">Présentation</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/taekwondo/infos.php">Infos pratiques</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/taekwondo/contact.php">Nous contacter</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/galerie.php">Galerie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/prestations.php">Prestations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/boutique.php">Boutique</a>
-      </li>
-    </ul>
-      <?php if (!isset($_SESSION['profil'])){?>
-        <ul class="navbar-text">
-          <!--li class="nav-item"-->
-            <a  id="btn-fblogin" href="/taekwondo/inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> |
-            <!--class="nav-link" href="inscription.php" role="button">S'inscrire</a-->
-          <!--/li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-default" href="connexion.php" role="button">Se connecterstyle="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; </a-->
-            <a id="btn-fblogin" href="/taekwondo/login.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
-          <!--/li-->
-        </ul>
-      <?php }else{ ?>
-      <div class="navbar-text">
-          <a href="/taekwondo/mon-espace.php" class="btn btn-success" role="button">Espace membre</a>
-          <a href="/taekwondo/logout.php" class="btn btn-warning" role="button">
-              <i class="fa fa-power-off" aria-hidden="true"></i>
-          </a>
-      </div>
-      <?php } ?>
-  </div>
-=======
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/"><img src="/assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
+    <a class="navbar-brand" href="/admin/accueil.php"><img src="/assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,23 +8,24 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/admin/accueil.php">Accueil <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="../prestations/list-prestation.php">Prestations</a>
+                <a class="nav-link" href="/admin/prestations/list-prestation.php">Prestations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../reservations/list-reservation.php">Reservations</a>
+                <a class="nav-link" href="/admin/reservations/list-reservation.php">Reservations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#../contacts/list-contact.php">Messages de contacts</a>
+
+                <a class="nav-link" href="../contacts/list-contact.php">Messages de contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../users/list-user.php">Utilisateurs</a>
+                <a class="nav-link" href="../users/list-users.php">Utilisateurs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../parametres.php">Paramètres</a>
+                <a class="nav-link" href="/admin/parametres.php">Paramètres</a>
             </li>
            <!-- <li class="nav-item">
                 <a class="nav-link" href="../users/list-user.php">Utilisateurs</a>
@@ -111,11 +33,10 @@
         </ul>
 
         <div class="navbar-text">
-            <a href="../mon-compte.php" class="btn btn-success" role="button">Mon compte</a>
-            <a href="../../logout.php" class="btn btn-warning" role="button">
+            <a href="mon-compte.php" class="btn btn-success" role="button">Mon compte</a>
+            <a href="logout.php" class="btn btn-warning" role="button">
                 <i class="fa fa-power-off" aria-hidden="true"></i>
             </a>
         </div>
     </div>
->>>>>>> 1f19fa4eb9d85e58aa92f97e9d270c2808e20358
-</nav>
+  </nav>

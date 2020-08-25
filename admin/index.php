@@ -57,7 +57,7 @@
 <body>
     
     <div class="">
-        <?php include 'includes/menu-admin.php'; ?>
+
         <div class="row">
             <div class="col-md-1"><!-- Colonne gauche --></div>
             <div class="col-md-10">
@@ -67,6 +67,6 @@
         </div>
 
     </div>
-    <?php include '../includes/footer.php';?>
+  
 </body>
 </html>
