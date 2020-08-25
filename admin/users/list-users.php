@@ -38,13 +38,13 @@
             <div class="row">
                 <!--<div class="col-md-2"></div>-->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
-                    <table class="table table-striped display responsive no-wrap" id="prestations-list">
+                    <table class="table table-striped display responsive no-wrap" id="list-users">
                         <thead class="thead-dark">
                             <tr>
-                        <th scope="col" colspan="16" class="cours" style="background-color: grey;">Liste des prestations</th>
+                        <th scope="col" colspan="16" class="cours" style="background-color: grey;">Liste des Membres</th>
                    
                     </tr>
-                     <?php while ($data = $response->fetch()) { ?>
+                     
                         <tr>
                             <!--th>IdUser</th-->
                             <th>Nom</th>
@@ -64,13 +64,12 @@
                         </tr>
                         </thead>
                         <tbody>
-
+                            <?php while ($data = $response->fetch()) { ?>
                             <tr>
-                                <!--td><?= $data['idUser'] ?></td-->
+                                
                                 <td><?= $data['nom'] ?></td>
                                 <td><?= $data['prenom'] ?></td>
-                                <td><?= $data['dateNaissance'].$data['lieuNaissance'] ?> </td>
-                                <!--td><?= $data['lieuNaissance'] ?> </td-->
+                                <td><?= $data['dateNaissance'].' '.$data['lieuNaissance'] ?> </td>
                                 <td><?= $data['sexe'] ?></td>
                                 <td><?= $data['adresse'] ?></td>
                                 <td><?= $data['codePostal'] ?></td>
@@ -127,7 +126,57 @@
         </div>
     </div>
 
-    
+    <!-- Modal de confirmation de désactivation -->
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirmation de désactivation</h5>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="prest-dis-slug" id="prest-dis-slug"/>
+                        <p>
+                            Êtes-vous sûr de vouloir désactiver cette prestation ?<br/>
+                            Elle ne figurera plus dans la liste des prestations visibles par vos visiteurs.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" name="confirm-dis">Oui</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modal de confirmation de désactivation -->
+
+    <!-- Modal de confirmation d'activation -->
+    <!-- Modal -->
+    <div class="modal fade" id="activationModal" tabindex="-1" role="dialog" aria-labelledby="activationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="activationModalLabel">Confirmation d'activation</h5>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="prest-en-slug" id="prest-en-slug"/>
+                        <p class="text-center">
+                            Êtes-vous sûr de vouloir activer cette prestation ?<br/>
+                            Elle figurera dans la liste des prestations visibles par vos visiteurs.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" name="confirm-en">Oui</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modal de confirmation de désactivation -->
 
     <?php include '../../includes/footer.php'; ?>
     <?php include '../../includes/js-links.html'; ?>

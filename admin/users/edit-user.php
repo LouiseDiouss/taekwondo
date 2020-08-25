@@ -12,7 +12,14 @@
     }
 
     
-       
+      if(isset($_POST['edit-user']))
+      {
+        $prest = htmlspecialchars($_POST['nom-prestation']);
+        $cat = htmlspecialchars($_POST['categorie']);
+        $jour = htmlspecialchars($_POST['jour']);
+        $deb = htmlspecialchars($_POST['debut']);
+        $end = htmlspecialchars($_POST['fin']);
+  
 
         if(!empty($prest) and !empty($cat) and !empty($jour) and !empty($deb) and !empty($end))
         {
@@ -28,7 +35,8 @@
             }
         }else{
             $msg = ['warning' => 'Veuillez renseigner tous les champs.'];
-        }
+        } 
+    }
     
 ?>
 <!DOCTYPE html>
@@ -45,7 +53,7 @@
         <div class="container">
             <div class="row mt-5 mb-5">
                 <div class="col-md-2">
-                    <a role="button" href="list-user.php" class="btn btn-outline-primary" >
+                    <a role="button" href="list-users.php" class="btn btn-outline-primary" >
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -59,7 +67,7 @@
                     <form method="post">
                         <?php include '../includes/_form-user.php';?>
                         <div class="form-group mt-3">
-                            <button class="btn btn-warning" type="submit" name="edit-prest">
+                            <button class="btn btn-warning" type="submit" name="edit-user">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 Modifier la user
                             </button>

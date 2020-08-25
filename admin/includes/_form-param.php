@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sylvanus
- * Date: 18/08/20
- * Time: 17:34
- */
+
 ?>
 
 <div class="form-group">

@@ -52,24 +52,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Administration - Taekwondo Challenge</title>
     <?php include './../includes/css-links.html';?>
-    <link rel="stylesheet" href="./../includes/style.css">
+    <!--link rel="stylesheet" href="./../includes/style.css"-->
 </head>
 <body>
     
     <div class="">
-<<<<<<< HEAD
-        <div class="">
-            <?php include 'includes/menu-admin.php'; ?>
-        </div>
-        <!--div class="row">
-            <div class="col-md-3"-->
-                <!--?php include 'includes/menu-admin.php'; ?>
-            </div>
-            <div class="col-md-9">
-
-            </div>d
-        </div-->
-=======
+        <?php include 'includes/menu-admin.php'; ?>
         <div class="row">
             <div class="col-md-1"><!-- Colonne gauche --></div>
             <div class="col-md-10">
@@ -77,7 +65,7 @@
             </div>
             <div class="col-md-1"><!-- Colonne droite --></div>
         </div>
->>>>>>> 1f19fa4eb9d85e58aa92f97e9d270c2808e20358
+
     </div>
     <?php include '../includes/footer.php';?>
 </body>
