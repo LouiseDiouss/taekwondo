@@ -24,7 +24,7 @@
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row mt-5 mb-3">
             <div class="row mb-5" style="width: 100%">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12" >
@@ -49,17 +49,17 @@
                             <!--th>IdUser</th-->
                             <th>Nom</th>
                             <th>Prénom</th>
-                            <th>Date et Lieu de Naissance</th>
+                            <!--th>Date et Lieu de Naissance</th-->
                             <th>Sexe</th>
                             <th>Adresse</th>
-                            <th>Code Postal</th>
+                            <!--th>Code Postal</th>
                             <th>Ville</th>
-                            <th>Nationalité</th>
+                            <th>Nationalité</th-->
                             <th>Email</th>
                             <th>Tél</th>
                             <th>Tél Responsable</th>
-                            <th>Licence Sportive</th>
-                            <th>Passeport Sportif</th>
+                            <!--th>Licence Sportive</th>
+                            <th>Passeport Sportif</th-->
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -69,17 +69,14 @@
                                 
                                 <td><?= $data['nom'] ?></td>
                                 <td><?= $data['prenom'] ?></td>
-                                <td><?= $data['dateNaissance'].' '.$data['lieuNaissance'] ?> </td>
+                                <!--td><?= $data['dateNaissance'].' '.$data['lieuNaissance'] ?> </td-->
                                 <td><?= $data['sexe'] ?></td>
-                                <td><?= $data['adresse'] ?></td>
-                                <td><?= $data['codePostal'] ?></td>
-                                <td><?= $data['ville'] ?></td>
-                                <td><?= $data['nationalite'] ?></td>
+                                <td><?= $data['adresse'] . ' '.$data['codePostal'].' '.$data['ville'] ?></td>
                                 <td><?= $data['email'] ?></td>
-                                <td><?= $data['telephone'] ?></td>
+                                <td><?= $data['telephone']  ?></td>
                                 <td><?= $data['telResponsable'] ?></td>
-                                <td><?= $data['numLicence'] ?></td>
-                                <td><?= $data['passeportSportif'] ?></td>
+                                <!--td><?= $data['numLicence'] ?></td>
+                                <td><?= $data['passeportSportif'] ?></td-->
                                 <!-- Les buttons d'actions -->
                                 <td>
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
@@ -89,7 +86,7 @@
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                             </a>
                                         </div>
-                                        <div class="btn-group mr-2" role="group">
+                                        <!--div class="btn-group mr-2" role="group">
                                             <?php if ($data['active'] == true) { ?>
                                                 <a role="button" class="btn btn-danger" title="Désactiver"
                                                    data-toggle="modal" data-target="#confirmModal"
@@ -104,10 +101,10 @@
                                                 </a>
                                             <?php } ?>
 
-                                        </div>
+                                        </div-->
                                         <div class="btn-group mr-2" role="group">
-                                            <a role="button" class="btn btn-info" title="Reservations"
-                                               href="#reservations">
+                                            <a role="button" class="btn btn-info" title="InfosMembre"
+                                               href="infos-membre.php?user=<?= $data['slug'] ?>"  >
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
                                         </div>
