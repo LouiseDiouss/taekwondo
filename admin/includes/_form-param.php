@@ -41,34 +41,29 @@
         <input type="text" class="form-control" name="ets-tel" id="ets-tel" required
                value="<?php if(isset($parameter)) print $parameter['ets_telephone'];?>"/>
     </div>
+</div>
+<!-- Reseaux sociaux -->
+<div class="row">
     <div class="col">
         <label for="ets-email">Email <abbr title="Obligatoire" style="color: red">*</abbr></label>
         <input type="email" class="form-control" name="ets-email" id="ets-email" required
                value="<?php if(isset($parameter)) print $parameter['ets_email'];?>"/>
     </div>
-</div>
-<!-- Reseaux sociaux -->
-<div class="row">
     <div class="col">
         <label for="ets-facebook">Facebook</label>
         <input type="text" class="form-control" name="ets-facebook" id="ets-facebook"
                value="<?php if(isset($parameter)) print $parameter['ets_facebook'];?>"/>
     </div>
+</div>
+<div class="row">
     <div class="col">
         <label for="ets-twitter">Twitter</label>
         <input type="text" class="form-control" name="ets-twitter" id="ets-twitter"
                value="<?php if(isset($parameter)) print $parameter['ets_twitter'];?>"/>
     </div>
-</div>
-<div class="row">
     <div class="col">
         <label for="ets-instagram">Instagram</label>
         <input type="text" class="form-control" name="ets-instagram" id="ets-instagram"
                value="<?php if(isset($parameter)) print $parameter['ets_instagram'];?>"/>
-    </div>
-    <div class="col">
-        <label for="ets-snap">SnapChat</label>
-        <input type="text" class="form-control" name="ets-snap" id="ets-snap"
-               value="<?php if(isset($parameter)) print $parameter['ets_snapchat'];?>"/>
     </div>
 </div>

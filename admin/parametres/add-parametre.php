@@ -17,19 +17,18 @@
         $face = htmlspecialchars($_POST['ets-facebook']);
         $twitter = htmlspecialchars($_POST['ets-twitter']);
         $insta = htmlspecialchars($_POST['ets-instagram']);
-        $snap = htmlspecialchars($_POST['ets-snap']);
 
         //echo $adress, $cp, $ville;die();
 
         if (!empty($nom) && !empty($adress) && !empty($cp) && !empty($ville) && !empty($siege)
         && !empty($phone) && !empty($email)){
             $insert = 'INSERT INTO parametres(ets_slug, ets_nom, ets_adresse, ets_code_postal, ets_ville, ets_telephone, 
-                      ets_email, ets_siege_social, ets_est_active, ets_date_ajout_param, ets_facebook, ets_twitter, ets_instagram, ets_snapchat) 
-                      VALUES(UUID(), ?, ?, ?, ?, ?, ?, ?, true, NOW(), ?, ?, ?, ?)';
+                      ets_email, ets_siege_social, ets_est_active, ets_date_ajout_param, ets_facebook, ets_twitter, ets_instagram) 
+                      VALUES(UUID(), ?, ?, ?, ?, ?, ?, ?, true, NOW(), ?, ?, ?)';
 
             $request = $dataBase->prepare($insert);
 
-            $request->execute(array($nom, $adress, $cp, $ville, $phone, $email, $siege, $face, $twitter, $insta, $snap));
+            $request->execute(array($nom, $adress, $cp, $ville, $phone, $email, $siege, $face, $twitter, $insta));
 
             $msg = ['success' => 'Paramètres définies avec succes.'];
         }else{

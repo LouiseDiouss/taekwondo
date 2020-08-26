@@ -30,6 +30,7 @@
 <body>
     <?php include '../includes/menu-admin.php';?>
     <div class="container">
+        <h2 class="text-center mt-2 mb-2">Paramètres du site</h2>
         <div class="row justify-content-md-center mt-3 mb-3">
             <?php if (empty($param->fetch())){?>
             <div class="row mb-5">
@@ -41,38 +42,33 @@
                 </div>
             </div>
             <?php }?>
-            <div class="container">
+            <div class="">
                 <div class="table-responsive-sm">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <!--<td>Id</td>-->
+                            <td>Etat du paramètre</td>
                             <td>Raison sociale</td>
-                            <!--<td>Adresse</td>
-                            <td>Code postal</td>
-                            <td>Ville</td>-->
                             <td>Siege social</td>
                             <td>Téléphone</td>
                             <td>Email</td>
-                            <td colspan="4" class="text-center">Reseaux sociaux</td>
+                            <td colspan="3" class="text-center">Reseaux sociaux</td>
                             <td>Actions</td>
                         </tr>
                         </thead>
                         <tbody>
                         <?php while ($data = $response->fetch()) { ?>
                             <tr>
-                                <!--<td><?/*= $data['id_param'] */?></td>-->
+                                <td><?php if($data['ets_est_active'])
+                                    print '<i class="fa fa-circle" aria-hidden="true" style="color: green"></i>'.' Actif';
+                                    else print '<i class="fa fa-circle" aria-hidden="true" style="color: red"></i>'.' Inactif' ?></td>
                                 <td><?= $data['ets_nom'] ?></td>
-                                <!--<td><?/*= $data['ets_adresse'] */?></td>
-                                <td><?/*= $data['ets_code_postal'] */?></td>
-                                <td><?/*= $data['ets_ville'] */?></td>-->
-                                <td><?= $data['ets_siege_social'] ?></td>
+                                <td><?= substr($data['ets_siege_social'], 0, 22).'...' ?></td>
                                 <td><?= $data['ets_telephone'] ?></td>
                                 <td><?= $data['ets_email'] ?></td>
-                                <td><?= $data['ets_facebook'] ?></td>
-                                <td><?= $data['ets_twitter'] ?></td>
-                                <td><?= $data['ets_instagram'] ?></td>
-                                <td><?= $data['ets_snapchat'] ?></td>
+                                <td><?= substr($data['ets_facebook'], 0, 22).'...' ?></td>
+                                <td><?= substr($data['ets_twitter'], 0, 22).'...' ?></td>
+                                <td><?= substr($data['ets_instagram'], 0, 22).'...' ?></td>
                                 <td>
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
                                         <div class="btn-group mr-2" role="group">

@@ -25,7 +25,15 @@
 <body>
     <?php include '../includes/menu-admin.php';?>
     <div class="container">
-        <h2 class="text-center mt-3">Détails du paramètre</h2>
+        <div class="row mt-3">
+            <div class="col-md-1">
+                <a role="button" href="list-parametre.php" class="btn btn-outline-primary" >
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col"><h2 class="text-center">Détails du paramètre</h2></div>
+        </div>
+
         <div class="row justify-content-md-center mt-5">
 
             <div class="col-md-6">
@@ -36,17 +44,18 @@
                     <li class="list-group-item bg-light text-dark"><strong>Ville : </strong><?=$parameter['ets_ville'] ;?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Téléphone : </strong><?=$parameter['ets_telephone'] ;?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Email : </strong><?=$parameter['ets_email'] ;?></li>
-                    <li class="list-group-item bg-light text-dark"><strong>Siège social : </strong><?= $parameter['ets_siege_social']; ?></li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-light text-dark"><strong>État : </strong><?=$parameter['ets_est_active'] ;?></li>
+                    <li class="list-group-item bg-light text-dark"><strong>Siège social : </strong><?= $parameter['ets_siege_social']; ?></li>
+                    <li class="list-group-item bg-light text-dark"><strong>État : </strong><?php if($parameter['ets_est_active'])
+                            print '<i class="fa fa-circle" aria-hidden="true" style="color: green"></i>'.' Actif';
+                        else print '<i class="fa fa-circle" aria-hidden="true" style="color: red"></i>'.' Inactif' ?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Date d'ajout :</strong> <?=$parameter['ets_date_ajout_param'] ;?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Facebook :</strong> <?=$parameter['ets_facebook'] ;?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Twitter :</strong> <?=$parameter['ets_twitter'] ;?></li>
                     <li class="list-group-item bg-light text-dark"><strong>Instagram :</strong> <?=$parameter['ets_instagram'] ;?></li>
-                    <li class="list-group-item bg-light text-dark"><strong>Snapchat :</strong> <?=$parameter['ets_snapchat'] ;?></li>
                 </ul>
             </div>
         </div>
