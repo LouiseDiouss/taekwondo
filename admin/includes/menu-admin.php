@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/admin/accueil.php"><img src="/assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
+    <a class="navbar-brand" href="/admin/accueil.php"><img src="../assets/media/images/logo.png" alt="Taekwondo-Challenge-logo" style="width: 80px; height: 80px;"></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +12,10 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/prestations/list-prestation.php">Prestations</a>
+                <a class="nav-link" href="../prestations/list-prestation.php">Prestations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin/reservations/list-reservation.php">Reservations</a>
+                <a class="nav-link" href="../reservations/list-reservation.php">Reservations</a>
             </li>
             <li class="nav-item">
 
