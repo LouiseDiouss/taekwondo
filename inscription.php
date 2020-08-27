@@ -26,7 +26,7 @@
         !empty($codePostal) && !empty($ville) && !empty($tel) && !empty($telRespo) && !empty($email) && !empty($password) &&
         !empty($confPass) && !empty($licence) && !empty($passSport)){
             if (strcmp($password, $confPass) == 0){
-                if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)){  
 
                     $token = sha1($email).sha1($tel);
                     $hashPwd = password_hash($password, PASSWORD_BCRYPT);

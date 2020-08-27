@@ -4,7 +4,7 @@
     if (!empty(isset($_GET['user']))){
         $slug = $_GET['user'];
 
-       $str = 'SELECT idUser,nom,prenom,sexe,dateNaissance, lieuNaissance, adresse,codePostal,ville,telephone,email,telResponsable, numLicence, passeportSportif,nationalite, active FROM user WHERE slug= ?';
+       $str = 'SELECT idUser,slug_user,nom_user,prenom_user,sexe,dateNaissance, lieuNaissance, adresse_user ,code_postal_user ,ville_user ,telephone_user,email_user ,telResponsable, numLicence, passeportSportif,nationalite, est_active_user FROM user WHERE slug_user= ?';
 
         $request = $dataBase->prepare($str);
         $request->execute([$slug]);
@@ -35,13 +35,17 @@
 
         if(!empty($nom) and !empty($prenom) and !empty($dateNaissance) and !empty($lieuNaissance) and !empty($sexe) and !empty($adresse) and !empty($codePostal) and !empty($ville) and !empty($nationalite) and !empty($telephone) and !empty($telResponsable) and !empty($email) and !empty($numLicence) and !empty($passeportSportif))
         {
-            $str = 'UPDATE user SET nom = ?, prenom =?, dateNaissance = ?,lieuNaissance = ?,sexe = ?,adresse = ?,codePostal = ?,ville = ?, nationalite = ?,telephone = ? ,telResponsable = ?, email = ?, numLicence = ?,passeportSportif =  ?
-                    WHERE slug = ? AND idUser = ?';
+            $str = 'UPDATE user SET nom_user = ?, prenom_user =?, dateNaissance = ?,lieuNaissance = ?,sexe = ?,adresse_user = ?,code_postal_user = ?,ville_user = ?, nationalite = ?,telephone_user = ? ,telResponsable = ?, email_user = ?, numLicence = ?,passeportSportif =  ?
+                    WHERE slug_user = ? AND idUser = ?';
             $request = $dataBase->prepare($str);
-            $res = $request->execute(array($nom,$prenom,$dateNaissance,$lieuNaigssance,$sexe,$adresse,$codePostal,$ville,$nationalite,$telephone,$telResponsable,$email,$numLicence,$passeportSportif, $user['slug'], $user['id']));
+            $res = $request->execute(array($nom,$prenom,$dateNaissance,$lieuNaissance,$sexe,$adresse,$codePostal,$ville,$nationalite,$telephone,$telResponsable,$email,$numLicence,$passeportSportif, $user['slug_user'], $user['idUser']));
+
+
 
             if ($res){
                 $msg = ['success' => 'user modifiée avec succès.'];
+                header('location:list-users.php');
+
             }else{
                 $msg = ['danger' => 'Une erreur s\'est produite.'];
             }

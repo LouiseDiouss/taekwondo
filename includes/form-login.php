@@ -3,12 +3,12 @@
     <div class="container" style="margin:10% 40% 10% 30%;">
         <div class='row' style="margin-bottom: 3%;">
             <div class="col-md-5">
-                <div class="form-heading">
-                    <span class="prg">SE CONNECTER</span>
+                <div class="form-heading" style="background: #DF3F3F;margin: 20px 0px 20px 0px; padding: 20px;">
+                    <span class="prg" style="color: #ffffff;font-size: 23px; ">SE CONNECTER</span>
                 </div>
             </div>
         </div>
-        <fieldset style="padding:0px 0px 20px 20px;margin-bottom:30px; border:1px solid #DF3F3F; width:40%;">
+        <fieldset style="padding:0px 20px 20px 20px;margin-bottom:30px; border:1px solid #DF3F3F; width:40%;">
             <legend style=" color:#DF3F3F;font-weight:bold; text-transform:capitalize;"></legend>
             <div class='row' style="margin-bottom: 3%;">
                 <div class="col" style="margin-top:3%;">

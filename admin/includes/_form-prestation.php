@@ -3,7 +3,7 @@
         <label for="nom-prestation">Intitulé de la prestation</label>
         <input type="text" class="form-control" placeholder="Nom de la prestation"
                name="nom-prestation" id="nom-prestation" required
-                value="<?php if(isset($prestation)) print $prestation['nom'];?>">
+                value="<?php if(isset($prestation)) print $prestation['nom_prest'];?>">
         <div class="invalid-feedback">
             Veuillez saisir le nom de la prestation
         </div>

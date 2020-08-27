@@ -2,8 +2,8 @@
     session_start();
     require_once 'proccess/config.php';
 
-    $str = 'SELECT idCours, slug, nom, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
-            FROM prestation WHERE active = true ';
+    $str = 'SELECT idCours, slug_prest, nom_prest, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
+            FROM prestation WHERE est_active_prest = true ';
     $response = $dataBase->query($str);
 
     //var_dump($_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PROTOCOL']);
@@ -18,9 +18,9 @@
 </head>
 <body>
     <?php include 'includes/menu.php';?>
-    <div class="container mt-3">
+    <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                     <h2 class="text-center">NOS COURS</h2>
                 </div>
@@ -31,7 +31,7 @@
                     <?php while ($data = $response->fetch()) { ?>
                         <div class="card mr-2 mb-2" style="width: 16rem;">
                             <div class="card-body">
-                                <h5 class="card-title"><strong><em><?= ucfirst($data['nom']); ?></em></strong></h5>
+                                <h5 class="card-title"><strong><em><?= ucfirst($data['nom_prest']); ?></em></strong></h5>
                                 <p class="card-text text-center"
                                    style="color: red; font-weight: bold;"><?= ucfirst($data['categorie']); ?></p>
                                 <p class="card-text text-center"><?= ucfirst($data['jour']); ?></p>

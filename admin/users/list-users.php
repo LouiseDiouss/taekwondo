@@ -67,13 +67,13 @@
                             <?php while ($data = $response->fetch()) { ?>
                             <tr>
                                 
-                                <td><?= $data['nom'] ?></td>
-                                <td><?= $data['prenom'] ?></td>
+                                <td><?= $data['nom_user'] ?></td>
+                                <td><?= $data['prenom_user'] ?></td>
                                 <!--td><?= $data['dateNaissance'].' '.$data['lieuNaissance'] ?> </td-->
                                 <td><?= $data['sexe'] ?></td>
-                                <td><?= $data['adresse'] . ' '.$data['codePostal'].' '.$data['ville'] ?></td>
-                                <td><?= $data['email'] ?></td>
-                                <td><?= $data['telephone']  ?></td>
+                                <td><?= $data['adresse_user'] . ' '.$data['code_postal_user'].' '.$data['ville_user'] ?></td>
+                                <td><?= $data['email_user'] ?></td>
+                                <td><?= $data['telephone_user']  ?></td>
                                 <td><?= $data['telResponsable'] ?></td>
                                 <!--td><?= $data['numLicence'] ?></td>
                                 <td><?= $data['passeportSportif'] ?></td-->
@@ -82,7 +82,7 @@
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-warning" title="Modifier"
-                                               href="edit-user.php?user=<?= $data['slug'] ?>">
+                                               href="edit-user.php?user=<?= $data['slug_user'] ?>">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                             </a>
                                         </div>
@@ -104,7 +104,7 @@
                                         </div-->
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-info" title="InfosMembre"
-                                               href="infos-membre.php?user=<?= $data['slug'] ?>"  >
+                                               href="infos-membre.php?user=<?= $data['slug_user'] ?>"  >
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
                                         </div>

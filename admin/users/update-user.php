@@ -3,7 +3,7 @@
     <div class="form-group" style="margin-top: 25px;">
         <label for="nom">Nom</label>
         <input type="text" class="form-control" placeholder="" name="nom" id="nom" required
-                value="<?php if(isset($user)) echo $user['nom'];?>">
+                value="<?php if(isset($user)) echo $user['nom_user'];?>">
         <div class="invalid-feedback">
             oups!!!! 
         </div>
@@ -11,7 +11,7 @@
      <div class="form-group" style="margin-top: 25px;">
         <label for="prenom">Prénom</label>
         <input type="text" class="form-control" placeholder="" name="prenom" id="prenom" required
-                value="<?php if(isset($user)) echo $user['prenom'];?>">
+                value="<?php if(isset($user)) echo $user['prenom_user'];?>">
         <div class="invalid-feedback">
             oups!!!! 
         </div>
@@ -57,25 +57,25 @@
     <div class="form-group" style="margin-top: 25px;">
         <label for="adresse">Adresse</label>
         <input type="text" class="form-control" placeholder="" name="adresse" id="adresse" required
-                value="<?php if(isset($user)) echo $user['adresse']; ?>">
+                value="<?php if(isset($user)) echo $user['adresse_user']; ?>">
         <div class="invalid-feedback">oups!!!! adresse pas chargée</div>
     </div>
     <div class="form-group" style="margin-top: 25px;">
         <label for="codePostal">Code Postal</label>
         <input type="text" class="form-control" placeholder="" name="codePostal" id="codePostal" required
-                value="<?php if(isset($user)) echo $user['codePostal'];  ?>">
+                value="<?php if(isset($user)) echo $user['code_postal_user'];  ?>">
         <div class="invalid-feedback">oups!!!! Code Postal pas chargée</div>
     </div>
     <div class="form-group" style="margin-top: 25px;">
         <label for="ville">Ville</label>
         <input type="text" class="form-control" placeholder="" name="ville" id="ville" required
-                value="<?php if(isset($user)) echo $user['ville'];  ?>">
+                value="<?php if(isset($user)) echo $user['ville_user'];  ?>">
         <div class="invalid-feedback">oups!!!! ville pas chargée</div>
     </div>
      <div class="form-group" style="margin-top: 25px;">
         <label for="email">Email</label>
         <input type="email" class="form-control" placeholder="" name="email" id="email" required
-                value="<?php if(isset($user)) echo $user['email'];?>">
+                value="<?php if(isset($user)) echo $user['email_user'];?>">
         <div class="invalid-feedback">
             oups!!!! verifiez l'adresse
         </div>
@@ -84,7 +84,7 @@
         <div class="form-row" >
             <label for="telephone">Téléphone</label>
             <input type="text" class="form-control" placeholder="" name="telephone" id="telephone" required
-                    value="<?php if(isset($user)) echo $user['telephone'];  ?>">
+                    value="<?php if(isset($user)) echo $user['telephone_user'];  ?>">
          </div>
          <div class="form-row" >
             <label for="telResponsable" style="margin-top: 15px;">Téléphone Responsable</label>

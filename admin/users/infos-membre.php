@@ -5,7 +5,7 @@
    {
         $slug = $_GET['user'];
             
-            $str = 'SELECT idUser,nom,prenom,sexe,dateNaissance, lieuNaissance, adresse,codePostal,ville,telephone,email,telResponsable, numLicence, passeportSportif FROM user WHERE slug= ?';
+            $str = 'SELECT idUser,nom_user,prenom_user,sexe,dateNaissance, lieuNaissance, adresse_user,code_postal_user,ville_user,telephone_user,email_user,telResponsable, numLicence, passeportSportif FROM user WHERE slug_user= ?';
 
             $request = $dataBase->prepare($str);
             $request->execute([$slug]);
