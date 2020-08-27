@@ -4,7 +4,8 @@
 
     $host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
-    if (!empty(isset($_GET['contact']))){
+    if (!empty(isset($_GET['contact'])))
+    {
         $slug = $_GET['contact'];
 
         $str = 'SELECT idContact, slug, nom, prenom, email, objet, message, reponse, dateReponse
@@ -38,13 +39,16 @@
                      /* Envoi de mail */
                 $msg = ['success' => 'contact modifiée avec succès.'];
 
-              echo '<script type="text/javascript">
+                header('location:list-contact.php');
+
+
+              /*echo '<script type="text/javascript">
                         alert("Votre reponse  N° '.$contact['slug'].' a bien ete envoye");
                     </script>';
 
               echo '<SCRIPT LANGUAGE="JavaScript">
                             document.location.href="list-contact.php"
-                    </SCRIPT>';
+                    </SCRIPT>';*/
             }else{
                 $msg = ['danger' => 'Une erreur s\'est produite.'];
             }
@@ -61,6 +65,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <?php include '../../includes/css-links.html'?>
         <link rel="stylesheet" href="../../includes/style.css">
+
     </head>
     <body>
         <?php include '../../includes/menu.php'; ?>

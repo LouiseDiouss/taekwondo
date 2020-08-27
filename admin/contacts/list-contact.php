@@ -4,8 +4,6 @@
     $str = 'SELECT * FROM contact ORDER BY dateContact DESC';
 
 
-    
-
     $response = $dataBase->query($str);
 ?>
 
@@ -58,7 +56,7 @@
                                 <td><?= $data['prenom'] ?></td>
                                 <td><?= $data['email'] ?></td>
                                 <td><?= $data['objet'] ?></td>
-                                <td><?= $data['message'] ?></td>
+                                <td><?= substr($data['message'], 0, 43). '...' ?></td>
                                 <td><?= $data['dateContact'] ?></td>
 
                                 <!-- Les buttons d'actions -->
@@ -110,7 +108,7 @@
               </div>
             </div>
           </div>
-    </div-->
+    </div-- >
 
 
 

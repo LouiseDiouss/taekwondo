@@ -1,7 +1,8 @@
 <?php 
-	require 'proccess/config.php';
-	require_once 'proccess/mailer.php';
+	require '../proccess/config.php';
+	require_once '../proccess/mailer.php';
 
+	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['demandeInscription'])){
 	    $nom = htmlspecialchars($_POST['nom']);
@@ -30,9 +31,9 @@
                     $token = sha1($email).sha1($tel);
                     $hashPwd = password_hash($password, PASSWORD_BCRYPT);
 
-                    $insert = 'INSERT INTO user(slug_user, email_user, password, nationalite, nom_user, prenom_user, sexe, dateNaissance, 
-                                lieuNaissance, adresse_user, code_postal_user, ville_user, telephone_user, telResponsable, numLicence, 
-                                passeportSportif, profil, est_active_user, token_de_confirmation, date_ajout)
+                    $insert = 'INSERT INTO user(slug, email, password, nationalite, nom, prenom, sexe, dateNaissance, 
+                                lieuNaissance, adresse, codePostal, ville, telephone, telResponsable, numLicence, 
+                                passeportSportif, profil, active, token_de_confirmation, date_ajout)
                                 VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,true,?,NOW())';
 
                     $request = $dataBase->prepare($insert);
@@ -66,10 +67,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8">s
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Devenir membre - Taekwondo Challenge</title>
-	<?php include 'includes/css-links.html';?>
+	<?php include '../includes/css-links.html';?>
+    <link rel="stylesheet" href="../includes/style.css">
 	<!--?php include 'includes/style.css';?-->
 </head>
 <body>
@@ -87,8 +89,8 @@
 
 	<!-- formulaire d'inscription -->
 	<!-- Pieds de page -->
-	<?php include 'includes/footer.php'; ?>
+	<?php include '../includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	<?php include '../includes/js-links.html';?>
 </body>
 </html>

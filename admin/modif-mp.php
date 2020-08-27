@@ -1,38 +1,24 @@
 <?php 
-	require 'proccess/config.php';
-	require_once 'proccess/mailer.php';
+	require '../proccess/config.php';
+	require_once '../proccess/mailer.php';
 
+	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['demandeInscription'])){
-	    $nom = htmlspecialchars($_POST['nom']);
-	    $prenom = htmlspecialchars($_POST['prenom']);
-	    $sexe = htmlspecialchars($_POST['sexe']);
-	    $birthday = htmlspecialchars($_POST['dateNaissance']);
-	    $lieuNaiss = htmlspecialchars($_POST['lieuNaissance']);
-	    $nationalite = htmlspecialchars($_POST['nationalite']);
-	    $adress = htmlspecialchars($_POST['adresse']);
-	    $codePostal = htmlspecialchars($_POST['codePostal']);
-        $ville = htmlspecialchars($_POST['ville']);
-        $tel = htmlspecialchars($_POST['telephone']);
-        $telRespo = htmlspecialchars($_POST['telResponsable']);
-        $email = htmlspecialchars($_POST['email']);
+	   
         $password = htmlspecialchars($_POST['password']);
-        $confPass = htmlspecialchars($_POST['confirm-password']);
-        $licence = htmlspecialchars($_POST['numLicence']);
-        $passSport = htmlspecialchars($_POST['pass-sport']);
+       
 
-        if (!empty($nom) && !empty($prenom) && !empty($sexe) && !empty($birthday) && !empty($lieuNaiss) && !empty($adress) &&
-        !empty($codePostal) && !empty($ville) && !empty($tel) && !empty($telRespo) && !empty($email) && !empty($password) &&
-        !empty($confPass) && !empty($licence) && !empty($passSport)){
+        if (!empty($password) && !empty($confPass) && !empty($licence) && !empty($passSport)){
             if (strcmp($password, $confPass) == 0){
                 if (filter_var($email, FILTER_VALIDATE_EMAIL)){  
 
                     $token = sha1($email).sha1($tel);
                     $hashPwd = password_hash($password, PASSWORD_BCRYPT);
 
-                    $insert = 'INSERT INTO user(slug_user, email_user, password, nationalite, nom_user, prenom_user, sexe, dateNaissance, 
-                                lieuNaissance, adresse_user, code_postal_user, ville_user, telephone_user, telResponsable, numLicence, 
-                                passeportSportif, profil, est_active_user, token_de_confirmation, date_ajout)
+                    $insert = 'INSERT INTO user(slug, email, password, nationalite, nom, prenom, sexe, dateNaissance, 
+                                lieuNaissance, adresse, codePostal, ville, telephone, telResponsable, numLicence, 
+                                passeportSportif, profil, active, token_de_confirmation, date_ajout)
                                 VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,true,?,NOW())';
 
                     $request = $dataBase->prepare($insert);
@@ -69,11 +55,12 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Devenir membre - Taekwondo Challenge</title>
-	<?php include 'includes/css-links.html';?>
+	<?php include '../includes/css-links.html';?>
+    <link rel="stylesheet" href="../includes/style.css">
 	<!--?php include 'includes/style.css';?-->
 </head>
 <body>
-	<?php include 'includes/menu.php';?>
+	<?php include 'includes/menu-admin.php';?>
 
 	<!-- formulaire d'inscription style="margin:50px 100px 100px 100px;"-->
 		<div class="container" >
@@ -82,13 +69,13 @@
                     <?=$msg[key($msg)]?>
                 </p>
             <?php }?>
-			<?php include 'includes/form-inscription.php'; ?>
+			<?php include 'includes/_form-MP.php'; ?>
 		</div>
 
 	<!-- formulaire d'inscription -->
 	<!-- Pieds de page -->
-	<?php include 'includes/footer.php'; ?>
+	<?php include '../includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	<?php include '../includes/js-links.html';?>
 </body>
 </html>
