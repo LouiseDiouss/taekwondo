@@ -13,6 +13,7 @@
 
     /*(($user['active']== 0) AND)*/
     
+    
       if (isset($_POST['edit-user'])) 
       {
              $nom = htmlspecialchars($_POST['nom']);

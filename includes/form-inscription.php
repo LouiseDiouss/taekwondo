@@ -86,12 +86,12 @@
                                     <div class="col">     
                                                 <label for="téléphone">Téléphone:</label>
                                                    <!--  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span> -->
-                                                    <input id="telephone" type="text" class="form-control" name="telephone" value="+(33)" placeholder="" required>
+                                                    <input id="telephone" type="text" class="form-control" name="telephone" value="" placeholder="" required>
                                     </div>
                                     <div class="col"> 
                                             <label for="telResponsable">Téléphone </label>
                                                     <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span> -->
-                                                    <input id="telResponsable" type="tel" class="form-control" name="telResponsable" value="+(33)" placeholder="Téléphone Responsable">
+                                                    <input id="telResponsable" type="tel" class="form-control" name="telResponsable"  placeholder="Téléphone Responsable">
                                     </div>
                                 </div> 
                             </fieldset>

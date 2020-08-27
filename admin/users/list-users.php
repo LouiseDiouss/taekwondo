@@ -80,28 +80,16 @@
                                 <!-- Les buttons d'actions -->
                                 <td>
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
-                                        <div class="btn-group mr-2" role="group">
-                                            <a role="button" class="btn btn-warning" title="Modifier"
-                                               href="edit-user.php?user=<?= $data['slug_user'] ?>">
-                                                <i class="fa fa-edit" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                        <!--div class="btn-group mr-2" role="group">
-                                            <?php if ($data['active'] == true) { ?>
-                                                <a role="button" class="btn btn-danger" title="Désactiver"
-                                                   data-toggle="modal" data-target="#confirmModal"
-                                                   onclick="getDisId('<?= $data['slug'] ?>')">
-                                                    <i class="fa fa-ban" aria-hidden="true"></i>
+                                        <?php if ($data['est_active_user'] == false) { ?>
+                                            <div class="btn-group mr-2" role="group">
+                                                <a role="button" class="btn btn-warning" title="Modifier"
+                                                   href="edit-user.php?user=<?= $data['slug_user'] ?>">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
-                                            <?php } else { ?>
-                                                <a role="button" class="btn btn-success" title="Activer"
-                                                   data-toggle="modal" data-target="#activationModal"
-                                                   onclick="getEnId('<?= $data['slug'] ?>')">
-                                                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
-                                                </a>
-                                            <?php } ?>
+                                            </div>
+                                         <?php }  ?>
 
-                                        </div-->
+                                        
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-info" title="InfosMembre"
                                                href="infos-membre.php?user=<?= $data['slug_user'] ?>"  >
