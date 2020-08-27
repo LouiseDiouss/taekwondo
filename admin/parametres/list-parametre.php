@@ -1,10 +1,12 @@
 <?php
     session_start();
-    require_once '../../proccess/config.php';
 
+    // Redige le visiteur qui n'a pas les droits d'accès...
     if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
         header('location: /');
     }
+
+    require_once '../../proccess/config.php';
 
     $str = 'SELECT * FROM parametres ORDER BY ets_est_active = true DESC';
     $activeParam = 'SELECT ets_nom, ets_est_active FROM parametres WHERE ets_est_active = true';

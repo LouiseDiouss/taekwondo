@@ -1,15 +1,21 @@
 <?php
+    session_start();
+
+    // Redige le visiteur qui n'a pas les droits d'accès...
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }
+
     require_once '../../proccess/config.php';
 
-    $str = 'SELECT * FROM prestation ORDER BY active = true DESC';
-
+    $str = 'SELECT * FROM prestation ORDER BY est_active_prest = true DESC';
 
     /* Désactivation d'une prestation */
     if (isset($_POST['confirm-dis'])){
         $disSlug = htmlspecialchars($_POST['prest-dis-slug']);
 
         if (!empty($disSlug)){
-            $disStr = 'UPDATE prestation SET active = false WHERE slug = ?';
+            $disStr = 'UPDATE prestation SET est_active_prest = false WHERE slug_prest = ?';
             $disRequest = $dataBase->prepare($disStr);
             $disRequest->execute([$disSlug]);
         }
@@ -22,7 +28,7 @@
         $enSlug = htmlspecialchars($_POST['prest-en-slug']);
 
         if (!empty($enSlug)){
-            $enStr = 'UPDATE prestation SET active = true WHERE slug = ?';
+            $enStr = 'UPDATE prestation SET est_active_prest = true WHERE slug_prest = ?';
             $enRequest = $dataBase->prepare($enStr);
             $enRequest->execute([$enSlug]);
         }
@@ -86,12 +92,12 @@
                         <?php while ($data = $response->fetch()) { ?>
                             <tr>
                                 <td><?= $data['idCours'] ?></td>
-                                <td><?= $data['nom'] ?></td>
+                                <td><?= $data['nom_prest'] ?></td>
                                 <td><?= ucfirst($data['categorie']); ?></td>
                                 <td><?= ucfirst($data['jour']) ?></td>
                                 <td><?= $data['debut'] ?></td>
                                 <td><?= $data['fin'] ?></td>
-                                <td><?= ($data['active'] == true) ? 'Active' : 'Désactivée'; ?></td>
+                                <td><?= ($data['est_active_prest'] == true) ? 'Active' : 'Inactive'; ?></td>
                                 <td><?= date_format(new DateTime($data['date_creation']), "d/m/Y à H:m") ?></td>
 
                                 <!-- Les buttons d'actions -->
@@ -99,21 +105,21 @@
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-warning" title="Modifier"
-                                               href="edit-prestation.php?prestation=<?= $data['slug'] ?>">
+                                               href="edit-prestation.php?prestation=<?= $data['slug_prest'] ?>">
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                         <div class="btn-group mr-2" role="group">
-                                            <?php if ($data['active'] == true) { ?>
+                                            <?php if ($data['est_active_prest'] == true) { ?>
                                                 <a role="button" class="btn btn-danger" title="Désactiver"
                                                    data-toggle="modal" data-target="#confirmModal"
-                                                   onclick="getDisId('<?= $data['slug'] ?>')">
+                                                   onclick="getDisId('<?= $data['slug_prest'] ?>')">
                                                     <i class="fa fa-ban" aria-hidden="true"></i>
                                                 </a>
                                             <?php } else { ?>
                                                 <a role="button" class="btn btn-success" title="Activer"
                                                    data-toggle="modal" data-target="#activationModal"
-                                                   onclick="getEnId('<?= $data['slug'] ?>')">
+                                                   onclick="getEnId('<?= $data['slug_prest'] ?>')">
                                                     <i class="fa fa-arrow-up" aria-hidden="true"></i>
                                                 </a>
                                             <?php } ?>
@@ -121,7 +127,7 @@
                                         </div>
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-info" title="Reservations"
-                                               href="list-reservation-prestation.php?prestation=<?= $data['slug'] ?>">
+                                               href="list-reservation-prestation.php?prestation=<?= $data['slug_prest'] ?>">
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
                                         </div>

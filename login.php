@@ -12,7 +12,7 @@
         $pwd = $_POST['password'];
 
         if (!empty($email) && !empty($pwd)){
-            $select = 'SELECT * FROM user WHERE email = ? AND active = true ';
+            $select = 'SELECT * FROM user WHERE email_user = ? AND est_active_user = true ';
             $request = $dataBase->prepare($select);
             $request->execute(array($email));
 
@@ -23,25 +23,25 @@
 
                 if (password_verify($pwd, $user['password'])) {
                     $_SESSION['idUser'] = $user['idUser'];
-                    $_SESSION['slug'] = $user['slug'];
-                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['slug'] = $user['slug_user'];
+                    $_SESSION['email'] = $user['email_user'];
                     $_SESSION['password'] = $user['password'];
-                    $_SESSION['nom'] = $user['nom'];
-                    $_SESSION['prenom'] = $user['prenom'];
+                    $_SESSION['nom'] = $user['nom_user'];
+                    $_SESSION['prenom'] = $user['prenom_user'];
                     $_SESSION['sexe'] = $user['sexe'];
                     $_SESSION['nation'] = $user['nationalite'];
                     $_SESSION['naissance'] = $user['dateNaissance'];
                     $_SESSION['lieu'] = $user['lieuNaissance'];
                     $_SESSION['adresse'] = $user['adresse'];
-                    $_SESSION['cp'] = $user['codePostal'];
-                    $_SESSION['ville'] = $user['ville'];
-                    $_SESSION['phone'] = $user['telephone'];
+                    $_SESSION['cp'] = $user['code_postal_user'];
+                    $_SESSION['ville'] = $user['ville_user'];
+                    $_SESSION['phone'] = $user['telephone_user'];
                     $_SESSION['phoneRespo'] = $user['telResponsable'];
                     $_SESSION['licence'] = $user['numLicence'];
                     $_SESSION['passSport'] = $user['passeportSportif'];
                     $_SESSION['profil'] = $user['profil'];
 
-                    $dataBase->prepare("UPDATE user SET derniere_connexion = NOW() WHERE slug = ?")->execute([$user['slug']]);
+                    $dataBase->prepare("UPDATE user SET derniere_connexion = NOW() WHERE slug_user = ?")->execute([$user['slug_user']]);
 
                     header('Location: prestations.php');
 

@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    // Redige le visiteur qui n'a pas les droits d'accès...
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }
+
     require_once '../../proccess/config.php';
 
     if (isset($_GET['parameter']) && !empty($_GET['parameter'])){

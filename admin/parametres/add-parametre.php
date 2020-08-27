@@ -1,10 +1,12 @@
 <?php
     session_start();
-    require_once '../../proccess/config.php';
 
+    // Redige le visiteur qui n'a pas les droits d'accès...
     if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
         header('location: /');
     }
+
+    require_once '../../proccess/config.php';
 
     if (isset($_POST['param'])){
         $nom = htmlspecialchars($_POST['ets-nom']);
@@ -49,7 +51,15 @@
 <body>
     <?php include '../includes/menu-admin.php';?>
     <div class="container">
-        <h2 class="text-center mt-2">Paramètres du site</h2>
+        <div class="row mt-3 mb-2">
+            <div class="col-md-1">
+                <a role="button" href="list-parametre.php" class="btn btn-outline-primary" >
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col"><h2 class="text-center">Paramètres du site</h2></div>
+        </div>
+        <!--<h2 class="text-center mt-2"></h2>-->
         <?php if (isset($msg)){?>
             <p class="alert alert-<?=key($msg)?>">
                 <?=$msg[key($msg)]?>

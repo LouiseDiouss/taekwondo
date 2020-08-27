@@ -1,11 +1,18 @@
 <?php
+    session_start();
+
+    // Redige le visiteur qui n'a pas les droits d'accès...
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }
+
     require_once '../../proccess/config.php';
 
     if (!empty(isset($_GET['prestation']))){
         $slug = $_GET['prestation'];
 
-        $str = 'SELECT idCours, slug, nom, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin 
-                FROM prestation WHERE slug = ?';
+        $str = 'SELECT idCours, slug_prest, nom_prest, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin 
+                FROM prestation WHERE slug_prest = ?';
         $request = $dataBase->prepare($str);
         $request->execute([$slug]);
 
@@ -21,10 +28,10 @@
 
 
         if(!empty($prest) and !empty($cat) and !empty($jour) and !empty($deb) and !empty($end)){
-            $str = 'UPDATE prestation SET nom = ?, categorie = ?, jour = ?, debut = ?, fin = ?, modifie_le = NOW() 
-                    WHERE slug = ? AND idCours = ?';
+            $str = 'UPDATE prestation SET nom_prest = ?, categorie = ?, jour = ?, debut = ?, fin = ?, modifie_le = NOW() 
+                    WHERE slug_prest = ? AND idCours = ?';
             $request = $dataBase->prepare($str);
-            $res = $request->execute(array($prest, $cat, $jour, $deb, $end, $prestation['slug'], $prestation['idCours']));
+            $res = $request->execute(array($prest, $cat, $jour, $deb, $end, $prestation['slug_prest'], $prestation['idCours']));
 
             if ($res){
                 $msg = ['success' => 'Prestation modifiée avec succès.'];

@@ -58,12 +58,33 @@
     <div class="container">
         <div class="row align-items-center">
             <!--<div class="col-md-1">-- Colonne gauche --</div>-->
-            <div class="col-md-4 ml-auto mr-auto mt-md-5" style="box-shadow: 10px 10px 10px grey; background-color: #DADADA">
+            <div class="col-md-4 ml-auto mr-auto mt-md-5" style="box-shadow: 10px 10px 10px grey; background-color: #F4F1F1">
                 <h2 class="text-center mb-4 mt-2">Connexion</h2>
                 <?php include '../includes/form-login.php';?>
             </div>
             <!--<div class="col-md-1"> Colonne droite </div>-->
         </div>
     </div>
+
+    <!-- Modal de saisie d'email pour récupération de mot de passe -->
+    <div class="modal fade" id="passwordForgetModal" tabindex="-1" role="dialog" aria-labelledby="passwordForgetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordForgetModalLabel">Saisir votre email</h5>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <input type="text" name="forget-email" class="form-control"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" name="pass-forget">Valider</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal de saisie d'email pour récupération de mot de passe -->
 </body>
 </html>

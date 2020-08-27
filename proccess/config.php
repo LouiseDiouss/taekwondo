@@ -9,4 +9,6 @@ try {
 
     $requestParameter = $dataBase->query('SELECT * FROM parametres WHERE ets_est_active = true');
     $appParameters = $requestParameter->fetch();
+
+    $host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 ?>

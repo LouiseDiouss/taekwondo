@@ -12,6 +12,11 @@
                 <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe" required>
             </div>
         </div>
+        <div class="row text-right mt-2">
+            <div class="col">
+                <a href="mot-de-passe-oublie.php">Mot de passe oublié</a>
+            </div>
+        </div>
          <div class="form-group mt-4 text-center">
                 <!-- Button -->
             <div class="col-sm-12 controls">
