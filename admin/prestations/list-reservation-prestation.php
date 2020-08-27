@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    // Redige le visiteur qui n'a pas les droits d'accès...
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }
+
     require_once '../../proccess/config.php';
 
     $str = 'SELECT * FROM reserver AS reserve, prestation AS prestation, user AS user 
@@ -22,10 +28,17 @@
     <?php include '../includes/menu-admin.php';?>
 
     <div class="container">
+        <div class="row mt-3 mb-3">
+            <div class="col-md-1">
+                <a role="button" href="list-prestation.php" class="btn btn-outline-primary" >
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col"><h2 class="text-center">Reservation sur la prestation</h2></div>
+        </div>
         <table class="table">
             <thead>
                 <tr>
-                    <!--<td>Id</td>-->
                     <td>Numéro réser.</td>
                     <td>Cours</td>
                     <td>Prénom & Nom</td>
@@ -35,10 +48,8 @@
                 <?php while ($reservation = $request->fetch()){?>
                     <tr>
                         <td><?=$reservation['numResa'];?></td>
-                        <td><?=$reservation['nom'];?></td>
-                        <td><?=$reservation['prenom'].' '.$reservation['nom'];?></td>
-                       <!-- <td><?/*=$reservation[''];*/?></td>
-                        <td><?/*=$reservation[''];*/?></td>-->
+                        <td><?=$reservation['nom_prest'];?></td>
+                        <td><?=$reservation['prenom_user'].' '.$reservation['nom_user'];?></td>
                     </tr>
                 <?php }?>
             </tbody>
