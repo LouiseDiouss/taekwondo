@@ -2,7 +2,6 @@
 	require 'proccess/config.php';
 	require_once 'proccess/mailer.php';
 
-	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['demandeInscription'])){
 	    $nom = htmlspecialchars($_POST['nom']);
@@ -31,9 +30,9 @@
                     $token = sha1($email).sha1($tel);
                     $hashPwd = password_hash($password, PASSWORD_BCRYPT);
 
-                    $insert = 'INSERT INTO user(slug, email, password, nationalite, nom, prenom, sexe, dateNaissance, 
-                                lieuNaissance, adresse, codePostal, ville, telephone, telResponsable, numLicence, 
-                                passeportSportif, profil, active, token_de_confirmation, date_ajout)
+                    $insert = 'INSERT INTO user(slug_user, email_user, password, nationalite, nom_user, prenom_user, sexe, dateNaissance, 
+                                lieuNaissance, adresse_user, code_postal_user, ville_user, telephone_user, telResponsable, numLicence, 
+                                passeportSportif, profil, est_active_user, token_de_confirmation, date_ajout)
                                 VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,true,?,NOW())';
 
                     $request = $dataBase->prepare($insert);

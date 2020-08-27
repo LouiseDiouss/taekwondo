@@ -6,9 +6,9 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" id="filter">
             <li class="nav-item active">
-                <a class="nav-link" href="/admin/accueil.php">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/admin/accueil.php">Accueil</a>
             </li>
 
             <li class="nav-item">
@@ -25,7 +25,7 @@
                 <a class="nav-link" href="../users/list-users.php">Utilisateurs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin/parametres.php">Paramètres</a>
+                <a class="nav-link" href="/admin/parametres/list-parametre.php">Paramètres</a>
             </li>
            <!-- <li class="nav-item">
                 <a class="nav-link" href="../users/list-user.php">Utilisateurs</a>
@@ -34,7 +34,7 @@
 
         <div class="navbar-text">
             <a href="mon-compte.php" class="btn btn-success" role="button">Mon compte</a>
-            <a href="logout.php" class="btn btn-warning" role="button">
+            <a href="../logout.php" class="btn btn-warning" role="button">
                 <i class="fa fa-power-off" aria-hidden="true"></i>
             </a>
         </div>

@@ -15,7 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <?php include '../../includes/css-links.html'?>
     <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap4.min.css">
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>
@@ -26,7 +28,8 @@
                 <!--<div class="col-md-2"></div>-->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
                     
-                    <table class="table table-striped display responsive no-wrap" id="prestations-list" style="margin-top: 50px;">
+                    <table class="table table-striped dt-responsive no-wrap" id="prestations-list"
+                           style="margin-top: 50px; width: 100%;">
                         <thead class="thead-dark">
                          <tr>
                              <th scope="col" colspan="9" class="cours" style="background-color: grey;">Liste des Contacts</th>
@@ -113,8 +116,12 @@
     <!--// fin fenêtre modale pour visualiser les infos sur un enregistrelent--->
 
     <?php include '../../includes/footer.php'; ?>
-    <?php include '../../includes/js-links.html'; ?>
+    <?php include '../includes/js-admin.html'; ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap4.min.js"></script>
     <script>
         function getDisId(id) {
             document.getElementById('prest-dis-slug').value = id;
@@ -125,7 +132,23 @@
         }
 
         $(document).ready( function () {
-            $('#prestations-list').DataTable();
+            $('#prestations-list').DataTable({
+                responsive: true,
+                "language": {
+                    "search": "Rechercher: ",
+                    "lengthMenu": "Montrer  _MENU_  r&eacute;sultats par page",
+                    "zeroRecords": "Aucun r&eacute;sultat trouv&eacute; ",
+                    "info": "Page _PAGE_ sur _PAGES_",
+                    "infoEmpty": "Aucun r&eacute;sultat",
+                    "infoFiltered": "(filtré de _MAX_ total records)",
+                    "paginate": {
+                        "first":      "Premier",
+                        "previous":   "Pr&eacute;c&eacute;dent",
+                        "next":       "Suivant",
+                        "last":       "Dernier"
+                    },
+                }
+            });
         } );
     </script>
 </body>

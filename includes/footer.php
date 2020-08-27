@@ -1,14 +1,14 @@
 <!-- footer -->
 <div class="footer" style="">
-	<div class="mt-5 p-3" >
+	<div class="p-3" >
 		<div class="row" ><!--style="margin-bottom: 5%;"-->
 			<div class="col-md-4">
 				<h3>A propos</h3>
 				<p style="font-weight: 500; margin-bottom: 20px;font-size: 16px;">Vous pouvez également nous suivre sur ces réseaux.</p>
 				<ul class="agileits_social_list" style="margin-bottom: 20px;">
-					<li><a href="https://m.facebook.com/taekwondochallenge44/"  class="w3_agile_facebook"target="_blank" style=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="https://twitter.com/taekwondochall1" target="_blank" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com/taekwondochallenge44/" target="_blank" class="w3_agile_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="<?php if (isset($appParameters)) print $appParameters['ets_facebook'];?>"  class="w3_agile_facebook" target="_blank" style=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="<?php if (isset($appParameters)) print $appParameters['ets_twitter'];?>" target="_blank" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="<?php if (isset($appParameters)) print $appParameters['ets_instagram'];?>" target="_blank" class="w3_agile_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 			<div class="col-md-3">
@@ -18,10 +18,15 @@
 			<div class="col-md-5" style="margin-bottom: 20px;">
 				<h3>Nos Coordonnées</h3>
 				<ul class="w3_address">
-					<li><i class="fa fa-map-marker" aria-hidden="true"></i>Siège social: 4 rue Laurent Bonnevay, 44200 Nantes</li>
-					<li><i class="fa fa-map-marker" aria-hidden="true"></i>Gymnase: esplanade d'angleterre,44200 Nantes</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:Taekwondochallenge.44@gmail.com">Taekwondochallenge.44@gmail.com</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+33) 6 21 46 64 67</li>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Siège social: <?php if (isset($appParameters)) print $appParameters['ets_siege_social'];?>
+                    </li>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Gymnase: <?php if (isset($appParameters)) print $appParameters['ets_adresse'];?>, 44200 Nantes
+                    </li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a href="mailto:<?php if (isset($appParameters)) print $appParameters['ets_email'];?>">Nous contacter</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i><?php if (isset($appParameters)) print $appParameters['ets_telephone'];?></li>
 				</ul>
 			</div>
 		</div>

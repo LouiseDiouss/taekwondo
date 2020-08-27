@@ -1,8 +1,12 @@
 <?php
-    require_once '../../proccess/config.php';
+    session_start();
 
-    /*var_dump(uniqid('prest-', true));
-    var_dump(UUID::v4());*/
+    // Redige le visiteur qui n'a pas les droits d'accès...
+    if ((isset($_SESSION['profil']) || !isset($_SESSION['profil'])) && strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+        header('location: /');
+    }
+
+    require_once '../../proccess/config.php';
 
     if (isset($_POST['add-prest'])){
         $prest = htmlspecialchars($_POST['nom-prestation']);
@@ -12,7 +16,7 @@
         $fin = htmlspecialchars($_POST['fin']);
 
         if(!empty($prest) and !empty($categorie) and !empty($jour) and !empty($debut) and !empty($fin)){
-            $str = 'INSERT INTO prestation(slug, nom, categorie, jour, debut, fin, active, date_creation) 
+            $str = 'INSERT INTO prestation(slug_prest, nom_prest, categorie, jour, debut, fin, est_active_prest, date_creation) 
                     VALUES (UUID(),?,?,?,?,?,?,NOW())';
             $request = $dataBase->prepare($str);
             $res = $request->execute(array($prest, $categorie, $jour, $debut, $fin, true));
