@@ -3,7 +3,7 @@
     require_once '../proccess/config.php';
 
     if (isset($_SESSION['profil']) && $_SESSION['profil'] == 'ROLE_ADMIN'){
-        header('Location: /admin/accueil.php');
+        header('Location:accueil.php');
     }
 
     if (isset($_POST['connexion'])){
@@ -30,7 +30,7 @@
 
                     $dataBase->prepare("UPDATE admin SET last_login = NOW() WHERE slug = ?")->execute([$admin['slug']]);
 
-                    header('Location: admin/accueil.php');
+                    header('Location: accueil.php');
 
                 } else {
                     $msg = array('danger' => 'Email et/ou mot de passe incorrects.');

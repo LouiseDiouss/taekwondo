@@ -61,14 +61,14 @@
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" style="margin-top: 10px;">
                     <h2>Modification d'une prestation</h2>
                     <?php if (isset($msg)){?>
                         <p class="alert alert-<?=key($msg)?>">
                             <?=$msg[key($msg)]?>
                         </p>
                     <?php }?>
-                    <form method="post">
+                    <form method="post" style="margin-top: 25px;">
                         <?php include '../includes/_form-prestation.php';?>
                         <div class="form-group mt-3">
                             <button class="btn btn-warning" type="submit" name="edit-prest">
