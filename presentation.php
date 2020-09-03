@@ -1,3 +1,13 @@
+<?php
+    session_start();
+	require 'proccess/config.php';
+	/*$time1 = time();
+    $time2 = time() + (1*24*60*60);
+    var_dump('date 1 :'.date('d/m/Y H:i:s', $time1));
+    var_dump('date 2: '.date('d/m/Y H:i:s', $time2));*/
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

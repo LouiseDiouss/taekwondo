@@ -1,4 +1,10 @@
+
+
 <?php 
+
+
+    session_start();
+	
 	require 'proccess/config.php';
 	require_once 'proccess/mailer.php';
 

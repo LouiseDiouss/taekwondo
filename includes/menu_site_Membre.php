@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="height: 100px;color:#0accff /*#e22a69*/;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="height: 100px;background-color:#0accff /*#e22a69*/;">
  
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
