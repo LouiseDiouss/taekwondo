@@ -14,7 +14,9 @@
 <body>
 
     <?php include 'includes/menuMembre.php';?>
-    <section style="background:pink;background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:10px 5px 10px 10px;">
+    <section style="background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:0px 5px 0px 0px;">
+
+        <?php include 'includes/menu_site_Membre.php';?>
     	<!--?php include 'includes/infos.php';?-->
         <form method="post">
             <?php include 'includes/infos.php';?>
