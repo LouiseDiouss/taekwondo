@@ -6,7 +6,6 @@
             FROM prestation WHERE est_active_prest = true ';
     $response = $dataBase->query($str);
 
-    //var_dump($_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PROTOCOL']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">

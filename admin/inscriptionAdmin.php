@@ -2,7 +2,7 @@
 	require '../proccess/config.php';
 	require_once '../proccess/mailer.php';
 
-	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
+	//$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['demandeInscription'])){
 	    $nom = htmlspecialchars($_POST['nom']);
@@ -52,6 +52,8 @@
                         /* Envoi de mail */
 
                         $msg = ['success' => 'Inscription réussie. Un courriel pour a été envoyé.'];
+
+                        header("refresh:5;url=/");
                     }
                 }else{
                     $msg = ['warning' => "E-mail non valide."];
