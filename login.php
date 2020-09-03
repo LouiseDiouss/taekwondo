@@ -43,7 +43,7 @@
 
                     $dataBase->prepare("UPDATE user SET derniere_connexion = NOW() WHERE slug_user = ?")->execute([$user['slug_user']]);
 
-                    header('Location: prestations.php');
+                    header('Location: '.$_SERVER['HTTP_REFERER']);
 
                 } else {
                     $msg = array('danger' => 'Email et/ou mot de passe incorrects.');
@@ -68,13 +68,18 @@
 <body>
     <?php include 'includes/menu.php';?>
 
-    <div class="container">
-        <?php if (isset($msg)){?>
-        <p class="alert alert-<?=key($msg)?>">
-            <?=$msg[key($msg)]?>
-        </p>
-        <?php }?>
-        <?php include 'includes/form-login.php';?>
+    <div class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-4 ml-auto mr-auto mt-md-5" style="box-shadow: 10px 10px 10px grey; background-color: #F4F1F1">
+                <h2 class="text-center mb-4 mt-2">Connexion</h2>
+                <?php if (isset($msg)){?>
+                    <p class="alert alert-<?=key($msg)?>">
+                        <?=$msg[key($msg)]?>
+                    </p>
+                <?php }?>
+                <?php include 'includes/form-login.php';?>
+            </div>
+        </div>
     </div>
 
     <?php include 'includes/footer.php'; ?>

@@ -8,28 +8,28 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/taekwondo/index.php">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Le club
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/taekwondo/presentation.php">Présentation</a>
+          <a class="dropdown-item" href="/presentation.php">Présentation</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/taekwondo/infos.php">Infos pratiques</a>
+          <a class="dropdown-item" href="/infos.php">Infos pratiques</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/taekwondo/contact.php">Nous contacter</a>
+          <a class="dropdown-item" href="/contact.php">Nous contacter</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/galerie.php">Galerie</a>
+        <a class="nav-link" href="/galerie.php">Galerie</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/prestations.php">Prestations</a>
+        <a class="nav-link" href="/prestations.php">Prestations</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/taekwondo/boutique.php">Boutique</a>
+        <a class="nav-link" href="/boutique.php">Boutique</a>
       </li>
     </ul>
       <?php if (!isset($_SESSION['profil'])){?>
@@ -37,7 +37,7 @@
           <!--li class="nav-item"-->
             <a  id="btn-fblogin" href="/taekwondo/inscription.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">S'inscrire</a> |
             
-            <a id="btn-fblogin" href="/taekwondo/login.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
+            <a id="btn-fblogin" href="/login.php" class="btn btn-lg  btn-primary" style="background-color: gray;font-size: 15px;">Se connecter</a>
           <!--/li-->
         </ul>
       <?php }else{ ?>

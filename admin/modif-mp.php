@@ -69,7 +69,7 @@
                     <?=$msg[key($msg)]?>
                 </p>
             <?php }?>
-			<?php include 'includes/_form-MP.php'; ?>
+			<?php include 'includes/_form-password.php'; ?>
 		</div>
 
 	<!-- formulaire d'inscription -->

@@ -9,7 +9,7 @@
     }*/
 
     if (isset($_GET['prestation']) && !is_null($_GET['prestation'])){
-        $reserSlug = htmlspecialchars($_GET['prestation']);
+        $reserSlug = trim(htmlspecialchars($_GET['prestation']));
 
         $str = 'SELECT idCours, slug, nom, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
                 FROM prestation WHERE slug = ?';
@@ -21,7 +21,7 @@
     }
 
     if(isset($_POST['reserver'])){
-        $number = htmlspecialchars($_POST['numero']);
+        $number = trim(htmlspecialchars($_POST['numero']));
 
         if (!empty($number)){
             $insert = 'INSERT INTO reserver(idCours, idUser, numResa, date_heure_resa)
