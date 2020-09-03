@@ -38,6 +38,7 @@
     <title>Ajouter une prestation</title>
     <?php include '../../includes/css-links.html'; ?>
      <link rel="stylesheet" href="../../includes/style.css">
+     <link rel="shortcut icon" href="../../assets/media/images/logo.png">
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>

@@ -12,7 +12,9 @@
 	<meta charset="utf-8">
 	<title>Accueil - Taekwondo Challenge</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<link href="./assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!--link rel="icon" type="image/x-icon" href="assets/media/images/logo.png"/-->
+	<link rel="shortcut icon" href="assets/media/images/logo.png">
 	<?php include 'includes/css-links.html';?>
 	<!--?php include 'includes/style.css';?-->
 </head>
@@ -62,7 +64,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="assets/media/images/1.jpg" alt=" " class="img-responsive" />
+								<img src="/assets/media/images/logo.png" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->
@@ -74,7 +76,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="assets/media/images/2.jpg" alt=" " class="img-responsive" />
+								<img src="assets/media/images/logo.jpg" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sylvanus
- * Date: 25/08/20
- * Time: 10:34
- */
+
 
 require_once '../proccess/config.php';
 

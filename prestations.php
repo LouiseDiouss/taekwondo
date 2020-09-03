@@ -17,15 +17,21 @@
 </head>
 <body>
     <?php include 'includes/menu.php';?>
-    <div class="container mt-5 mb-5">
+    <div class="banner-bottom" >
+                <div class="container">
+                    <h2 class="agileits_head" >Nos Cours</h2>
+                </div>
+
+    </div>
+    <div class="container mt-0 mb-5">
         <div class="row">
-            <div class="row mb-3">
+            <!--div class="row mb-3">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                     <h2 class="text-center">NOS COURS</h2>
                 </div>
             </div>
-            <br>
-            <div class="row mt-3">
+            <br-->
+            <div class="row mt-0">
                 <!--<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">-->
                     <?php while ($data = $response->fetch()) { ?>
                         <div class="card mr-2 mb-2" style="width: 16rem;">

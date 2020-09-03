@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Accueil administration - Taekwondo Challenge</title>
     <?php include 'includes/css-admin.html';?>
+    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+
 </head>
 <body>
     <?php include 'includes/menu-admin.php';?>
