@@ -19,6 +19,7 @@
     <title>Liste des réservations</title>
     <?php include '../../includes/css-links.html'?>
     <link rel="stylesheet" href="../../includes/style.css">
+    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>

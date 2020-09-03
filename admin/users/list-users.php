@@ -17,7 +17,7 @@
     <title>Liste des utilisateurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <?php include '../../includes/css-links.html'?>
-    <link rel="icon" type="image/x-icon" href="../../assets/media/images/logo.png"/>
+    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
 
     <link rel="stylesheet" href="../../includes/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">

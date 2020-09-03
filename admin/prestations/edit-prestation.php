@@ -51,6 +51,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <?php include '../../includes/css-links.html'?>
         <link rel="stylesheet" href="../../includes/style.css">
+        <link rel="shortcut icon" href="../../assets/media/images/logo.png">
     </head>
     <body>
         <?php include '../includes/menu-admin.php'; ?>
@@ -61,14 +62,14 @@
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" style="margin-top: 10px;">
                     <h2>Modification d'une prestation</h2>
                     <?php if (isset($msg)){?>
                         <p class="alert alert-<?=key($msg)?>">
                             <?=$msg[key($msg)]?>
                         </p>
                     <?php }?>
-                    <form method="post">
+                    <form method="post" style="margin-top: 25px;">
                         <?php include '../includes/_form-prestation.php';?>
                         <div class="form-group mt-3">
                             <button class="btn btn-warning" type="submit" name="edit-prest">

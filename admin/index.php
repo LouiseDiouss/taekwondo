@@ -10,7 +10,6 @@
             //On redirige tout autre utilisateur qui est connecté à la page d'accueil du site
             header('Location: /');
         }
-
     }
 
     if (isset($_POST['connexion'])){
@@ -37,7 +36,7 @@
 
                     $dataBase->prepare("UPDATE admin SET last_login = NOW() WHERE slug = ?")->execute([$admin['slug']]);
 
-                    header('Location: admin/accueil.php');
+                    header('Location: accueil.php');
 
                 } else {
                     $msg = array('danger' => 'Email et/ou mot de passe incorrects.');
@@ -59,6 +58,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Administration - Taekwondo Challenge</title>
     <?php include './../includes/css-links.html';?>
+    <link rel="shortcut icon" href="../assets/media/images/logo.png">
 
 </head>
 <body>
