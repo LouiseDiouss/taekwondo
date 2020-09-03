@@ -71,7 +71,7 @@
     <meta charset="UTF-8">
     <title>Ajouter un Membre</title>
     <?php include '../../includes/css-links.html'; ?>
-     <link rel="icon" type="image/x-icon" href="../../assets/media/images/logo.png"/>
+     <link rel="shortcut icon" href="../../assets/media/images/logo.png">
 
     <link rel="stylesheet" href="../../includes/style.css">
 </head>

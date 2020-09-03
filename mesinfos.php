@@ -9,6 +9,7 @@
     <title>Mon espace membre - Taekwondo Challenge</title>
     <?php include 'includes/css-links.html';?>
     <link rel="stylesheet" href="includes/styleMembre.css">
+    <link rel="shortcut icon" href="assets/media/images/logo.png">
 </head>
 <body>
 

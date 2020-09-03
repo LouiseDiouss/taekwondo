@@ -1,10 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="">
-  <!--a class="navbar-brand" href="/"><img src="assets/media/images/logo.png"  width="100px" height="90px" alt="Taekwondo-Challenge-logo"></a-->
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <!--img src=".\images\logo.png"-->
-  </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="height: 100px;color:#0accff /*#e22a69*/;">
+ 
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -32,6 +27,6 @@
         <a class="nav-link" href="/taekwondo/boutique.php">Boutique</a>
       </li>
     </ul>
-      
+     
   </div>
 </nav>

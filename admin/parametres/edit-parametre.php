@@ -66,6 +66,7 @@
     <title>Modifier un paramètre - Taekwondo Challenge</title>
     <?php include '../includes/css-admin.html';?>
     <link rel="stylesheet" href="../../includes/style.css">
+    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
 </head>
 <body>
     <?php include '../includes/menu-admin.php';?>

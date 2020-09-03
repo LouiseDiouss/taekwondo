@@ -25,7 +25,7 @@
                 <a class="nav-link" href="../users/list-users.php">Utilisateurs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin/parametres/list-parametre.php">Paramètres</a>
+                <a class="nav-link" href="../parametres/list-parametre.php">Paramètres</a>
             </li>
            <!-- <li class="nav-item">
                 <a class="nav-link" href="../users/list-user.php">Utilisateurs</a>
@@ -33,7 +33,7 @@
         </ul>
 
         <div class="navbar-text">
-            <a href="mon-compte.php" class="btn btn-success" role="button">Mon compte</a>
+            <a href="../mon-compte.php" class="btn btn-success" role="button">Mon compte</a>
             <a href="../logout.php" class="btn btn-warning" role="button">
                 <i class="fa fa-power-off" aria-hidden="true"></i>
             </a>

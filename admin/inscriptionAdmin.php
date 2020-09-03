@@ -72,6 +72,7 @@
 	<title>Devenir membre - Taekwondo Challenge</title>
 	<?php include '../includes/css-links.html';?>
     <link rel="stylesheet" href="../includes/style.css">
+    <link rel="shortcut icon" href="../assets/media/images/logo.png">
 	<!--?php include 'includes/style.css';?-->
 </head>
 <body>

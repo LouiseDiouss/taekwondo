@@ -24,9 +24,9 @@
 					<li><i class="fa fa-map-marker" aria-hidden="true"></i>
                         Gymnase: <?php if (isset($appParameters)) print $appParameters['ets_adresse'];?>, 44200 Nantes
                     </li>
-					<!--li><i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <a href="mailto:<?php if (isset($appParameters)) print $appParameters['ets_email'];?>">Nous contacter</a></li-->
-                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:Taekwondochallenge.44@gmail.com">Taekwondochallenge.44@gmail.com</a></li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a href="mailto:<?php if (isset($appParameters)) print $appParameters['ets_email'];?>">Taekwondochallenge.44@gmail.com</a></li>
+                     <!--li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:Taekwondochallenge.44@gmail.com">Taekwondochallenge.44@gmail.com</a></li-->
 					<li><i class="fa fa-phone" aria-hidden="true"></i><?php if (isset($appParameters)) print $appParameters['ets_telephone'];?></li>
 				</ul>
 			</div>
