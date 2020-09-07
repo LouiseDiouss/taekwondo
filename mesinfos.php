@@ -1,5 +1,14 @@
 <?php
     session_start();
+
+    require_once 'proccess/config.php';
+
+    $str = 'SELECT nom_user,prenom_user,sexe,dateNaissance, lieuNaissance, adresse_user, code_postal_user, ville_user,telephone_user,email_user,telResponsable, nationalite, numLicence, passeportSportif FROM user WHERE email_user="'.$_SESSION['email_user'].'" ';
+
+    $request = $dataBase->query($str);
+    $data = $request->fetch()
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,31 +26,80 @@
     <section style="background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:0px 5px 0px 0px;">
 
         <?php include 'includes/menu_site_Membre.php';?>
-    	<!--?php include 'includes/infos.php';?-->
-        <form method="post">
-            <?php include 'includes/infos.php';?>
-                        <!--div class="form-group mt-5">
-                             <a role="button" href="list-users.php" class="btn btn-primary" >
-                             <i class="fa fa-home" aria-hidden="true">RETOUR</i> </a>
-.                        </div-->
+    	<div class="container" style="padding:0px 150px 0px 10px;"  ><!--"-->
+            <div class="table-responsive-sm">
+                <table class="table" style="margin-top:40px;margin-bottom: 100px;"> <!--padding: 0px 150px 0px 100px;-->
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" colspan="" class="cours">MON DOSSIER </th>
+               
+                    </tr>
+                        <tr>
+                                <th>ETAT CIVIL </th>
+                                
+                         </tr>
+                    </thead>
+                    <tbody>
+                        <!--?php while () { ?-->
+                            <tr>
+                                <td style="text-transform:capitalize;text-align:left;">
+                                    <label style="width:220px;">Nom : </label><span style="font-weight: 500;"><?= $data['nom_user'] ?></span><br>
+                                    <label style="width:220px;">Prénom : </label><span style="font-weight: 500;"><?= $data['prenom_user'] ?></span><br>
+                                    <label style="width:220px;">Nationalité : </label><span style="font-weight: 500;"><?= $data['nationalite'] ?></span><br>
+                                    <label style="width:220px;">Date et lieu de Naissance :  </label><span style="font-weight: 500;"><?= $data['dateNaissance'].' '.$data['lieuNaissance']?></span><br>
+                                    <label style="width:220px;">Adresse : </label><span style="font-weight: 500;"><?= $data['adresse_user'].' '.$data['code_postal_user'].' '.$data['ville_user'] ?></span> <br>
+                                    <label style="width:220px;">Sexe : </label><span style="font-weight: 500;"><?= $data['sexe'] ?></span>
+                                    
+                                </td>
+                                
+                            </tr>
+                    </tbody>
 
-            <fieldset style="padding:0px 20px 20px 20px;margin-bottom:30px; border:0px solid #DF3F3F; width:83%; text-align:center;">    
-                    <div style="margin-top:8px" class="form-group">
-                                        <!-- Button -->
+                    <thead class="thead-dark">
+                        
+                        <tr style="text-transform:capitalize;text-align:left;size:25px;">
+                                <th>COORDONNEES </th>
+                                
+                         </tr>
+                    </thead>
+                    <tbody>
+                              <tr>
+                                 <td style="text-transform:capitalize;text-align:left;">
+                                    <label style="width:220px;"> email_user : </label><span style="font-weight: 500;"><?= $data['email_user'] ?></span><br>
+                                    <label style="width:220px;">Télephone : </label><span style="font-weight: 500;"><?= $data['telephone_user']  ?></span><br>
+                                    <label style="width:220px;">Téléphone Responsable : </label><span style="font-weight: 500;"><?= $data['telResponsable'] ?></span><br><br>
+                                    <a id="btn-fblogin" href="includes/modifTel_email.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 500;border-color:#DF3F3F;margin-left: 390px; "><i class="fa fa-pencil-square-o" aria-hidden="true">modifier</i></a>
+                                    <br>
+                                 </td>
+                            </tr>
+                    </tbody>
+                     <thead class="thead-dark">
+                        
+                        <tr>
+                               <th>INFORMATIONS SPORTIVES </th>
+                                
+                         </tr>
+                    </thead>
+                    <tbody>
+                              <tr>
+                                <td style="text-transform:capitalize;text-align:left;">
+                                    <label style="width:220px;">Licence Sportive : </label><span style="font-weight: 500;"><?= $data['numLicence'] ?></span><br>
+                                    <label style="width:220px;">Passeport Sportif : </label><span style="font-weight: 500;"><?= $data['passeportSportif'] ?></span><br>
+                                </td>
+                            </tr>
+                     </tr>
+                        <!--?php } ?-->
+                    </tbody>
+                    </table>
+                    
+                </table>
+            </div>
+        </div>
 
-                        <div class="col-sm-12 controls">
 
-                             <!--button class="btn btn-lg btn-primary" name="demandeInscription" type="submit" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F;margin-right: 5%;">MODIFIER</button-->
-                            <a id="btn-fblogin" href="../index.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 600;border-color:#DF3F3F; "><i class="fa fa-home" aria-hidden="true">MOFIFIER</i></a>
 
-                        </div>
-                    </div>
-                            
-            </fieldset>
-        </form>
-    </section>
-    <!-- Pieds de page -->
-    <!--?php include 'includes/footer.php'; ?>
-    <php include 'includes/js-links.html';?-->
+
+        
+    </section> 
 </body>
 </html>
