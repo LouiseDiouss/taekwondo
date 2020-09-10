@@ -69,12 +69,12 @@
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                             </a>
                                         </div>
-                                        <div class="btn-group mr-2" role="group">
+                                        <!--div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-primary" title="visualiser"
                                               data-toggle="modal" data-target="exampleModalScrollable" >
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
-                                        </div>
+                                        </div-->
 
                                     </div>
                                 </td>

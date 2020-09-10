@@ -56,7 +56,8 @@
 	<title>Accueil - Taekwondo Challenge</title>
 	<?php include 'includes/css-links.html';?>
 	<!--?php include 'includes/style.css';?-->
-	<link href="./assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="shortcut icon" href="assets/media/images/logo.png">
+	<!--link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /-->
 	<link href="//fonts.googleapis.com/css?family=Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 </head>
@@ -178,6 +179,6 @@
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	<!--?php include 'includes/js-links.html';?-->
 </body>
 </html>

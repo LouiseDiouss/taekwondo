@@ -12,21 +12,17 @@
 	<meta charset="utf-8">
 	<title>Accueil - Taekwondo Challenge</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="keywords" content="Taekwondo challenge Nantes" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script  src="assets/js/jquery-2.1.4.min.js"></script>
 	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!--link rel="icon" type="image/x-icon" href="assets/media/images/logo.png"/-->
+	<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" property="" />
+	
 	<link rel="shortcut icon" href="assets/media/images/logo.png">
 	<?php include 'includes/css-links.html';?>
-	<script  src="assets/js/jquery-2.1.4.min.js"></script>
-	<script defer src="assets/js/jquery.flexslider.js"  type="text/javascript"></script>
-	<script type="text/javascript" src="assets/js/move-top.js" ></script>
-	<script type="text/javascript" src="assets/js/easing.js" ></script>
-	<script type="text/javascript" src="assets/js/jquery.flexisel.js" ></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-
-
-
-	<!--?php include 'includes/style.css';?-->
 </head>
 <body>
 	<?php include 'includes/menu.php';?>
@@ -74,7 +70,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="assets/media/images/logo.png" alt=" " class="img-responsive" />
+								<img src="assets/media/images/1.jpg" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->
@@ -86,7 +82,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="assets/media/images/logo.png" alt=" " class="img-responsive" />
+								<img src="assets/media/images/2.jpg" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->
@@ -207,16 +203,12 @@
 
 	<!--?php include 'includes/js-links.html';?-->
 
-
-
-<script type="application/x-javascript"> addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //custom-theme -->
 
 
 <!-- flexSlider -->
 
-	
+	<script defer src="assets/js/jquery.flexslider.js" ></script>	
 	<script type="text/javascript">
 		$(window).on('load', function(){
 		  $('.flexslider').flexslider({
@@ -257,7 +249,9 @@
 		});
 	</script>
 	
-
+	<script type="text/javascript" src="assets/js/move-top.js" ></script>
+	<script type="text/javascript" src="assets/js/easing.js" ></script>
+	<script type="text/javascript" src="assets/js/jquery.flexisel.js" ></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		

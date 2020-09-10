@@ -11,10 +11,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Accueil - Taekwondo Challenge</title>
-	<link href="/taekwondo/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<title>	Galerie - Taekwondo Challenge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="keywords" content="Taekwondo challenge Nantes" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script  src="assets/js/jquery-2.1.4.min.js"></script>
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="assets/css/simpleLightbox.css" rel="stylesheet" type="text/css" />
+	<
+	<link rel="shortcut icon" href="assets/media/images/logo.png">
 	<?php include 'includes/css-links.html';?>
-	<!--?php include 'includes/style.css';?-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
 </head>
 <body>
 	<?php include './includes/menu.php';?>
@@ -140,14 +151,14 @@
 		</div>
 	</div>
 <!-- //gallery -->
-<?php include 'includes/js-links.html';?>
+<!--?php include 'includes/js-links.html';?-->
 <!-- //gallery -->
 	<script src="assets/js/simpleLightbox.js"></script>
 	<script>
 		$('.w3_agile_gallery_grid a').simpleLightbox();
 	</script>
 <!-- footer -->
-	
+
 	<!--fin galerie -->
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>

@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3b31771-cb5a-4087-aa39-cf30170c08a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/modifTel_email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/contacts/list-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/contacts/list-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/css-links.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css-links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/infos.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/infos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/menu-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/menu-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boutique.php" beforeDir="false" afterPath="$PROJECT_DIR$/boutique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/galerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/galerie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/js-links.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/js-links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infos.php" beforeDir="false" afterPath="$PROJECT_DIR$/infos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mesinfos.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesinfos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesreservations.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesreservations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/presentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prestations.php" beforeDir="false" afterPath="$PROJECT_DIR$/prestations.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +54,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599402547094</updated>
-      <workItem from="1599402550171" duration="9245000" />
+      <workItem from="1599402550171" duration="9505000" />
+      <workItem from="1599736494592" duration="3366000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1599739839552">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599739839552" />
   </component>
 </project>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-
     require_once 'proccess/config.php';
 
     $str = 'SELECT nom_user,prenom_user,sexe,dateNaissance, lieuNaissance, adresse_user, code_postal_user, ville_user,telephone_user,email_user,telResponsable, nationalite, numLicence, passeportSportif FROM user WHERE email_user="'.$_SESSION['email_user'].'" ';
@@ -26,9 +25,9 @@
     <section style="background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:0px 5px 0px 0px;">
 
         <?php include 'includes/menu_site_Membre.php';?>
-    	<div class="container" style="padding:0px 150px 0px 10px;"  ><!--"-->
+    	<div class="container" style="padding:0px 150px 0px 10px;"  >
             <div class="table-responsive-sm">
-                <table class="table" style="margin-top:40px;margin-bottom: 100px;"> <!--padding: 0px 150px 0px 100px;-->
+                <table class="table" style="margin-top:40px;margin-bottom: 100px;"> 
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col" colspan="" class="cours">MON DOSSIER </th>
@@ -40,7 +39,6 @@
                          </tr>
                     </thead>
                     <tbody>
-                        <!--?php while () { ?-->
                             <tr>
                                 <td style="text-transform:capitalize;text-align:left;">
                                     <label style="width:220px;">Nom : </label><span style="font-weight: 500;"><?= $data['nom_user'] ?></span><br>
@@ -68,8 +66,8 @@
                                     <label style="width:220px;"> email_user : </label><span style="font-weight: 500;"><?= $data['email_user'] ?></span><br>
                                     <label style="width:220px;">Télephone : </label><span style="font-weight: 500;"><?= $data['telephone_user']  ?></span><br>
                                     <label style="width:220px;">Téléphone Responsable : </label><span style="font-weight: 500;"><?= $data['telResponsable'] ?></span><br><br>
-                                    <a id="btn-fblogin" href="includes/modifTel_email.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 500;border-color:#DF3F3F;margin-left: 390px; "><i class="fa fa-pencil-square-o" aria-hidden="true">modifier</i></a>
-                                    <br>
+                                    <!--a id="btn-fblogin" href="includes/modifTel_email.php" class="btn btn-lg  btn-primary" style="background-color:transparent;color:#DF3F3F;font-weight: 500;border-color:#DF3F3F;margin-left: 390px; "><i class="fa fa-pencil-square-o" aria-hidden="true">modifier</i></a>
+                                    <br-->
                                  </td>
                             </tr>
                     </tbody>
@@ -88,7 +86,6 @@
                                 </td>
                             </tr>
                      </tr>
-                        <!--?php } ?-->
                     </tbody>
                     </table>
                     

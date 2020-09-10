@@ -26,35 +26,7 @@
         <li>
             <a href="logout.php"><span class="icon"><i class="fa fa-power-off"></i></span>Me Déconnecter</a>
         </li>
-        <!--li>
-            <a href="prestations.php"><span class="icon"><i class="fas fa-info-circle"></i></span>Boutique</a>
-        </li-->
-        <!--li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">  
-        <span class="icon"><i class="fas fa-file"></i></span>Prestations</a>
-
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li><a href="prestations.php">mes cours</a></li>
-                <li><a href="#">mes reservations</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
-        </li-->
-        <!--li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">  
-        <span class="icon"><i class="fas fa-file"></i></span>Boutique</a>
-
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li><a href="prestations.php">Les produits</a></li>
-                <li><a href="#">mes commandes</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
-        </li-->
-        <!--li>
-            <a href="#"><span class="icon"><i class="fas fa-camera"></i></span>Portfolio</a>
-        </li-->
-        <!--li>
-            <a href="#"><span class="icon"><i class="fas fa-mobile-alt"></i></span>Nous contacter</a>
-        </li-->
+        
     </ul>
 </nav>
 
