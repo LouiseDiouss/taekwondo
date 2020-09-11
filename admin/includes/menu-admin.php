@@ -5,27 +5,27 @@
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse" id="navbarText" >
         <ul class="navbar-nav mr-auto" id="filter">
             <li class="nav-item active">
-                <a class="nav-link" href="../accueil.php">Accueil</a>
+                <a class="nav-link" href="../accueil.php" >Accueil</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="../prestations/list-prestation.php">Prestations</a>
+                <a class="nav-link" href="../admin/prestations/list-prestation.php">Prestations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../reservations/list-reservation.php">Reservations</a>
+                <a class="nav-link" href="../admin/reservations/list-reservation.php">Reservations</a>
             </li>
             <li class="nav-item">
 
-                <a class="nav-link" href="../contacts/list-contact.php">Messages de contacts</a>
+                <a class="nav-link" href="../admin/contacts/list-contact.php">Messages de contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../users/list-users.php">Utilisateurs</a>
+                <a class="nav-link" href="../admin/users/list-users.php">Utilisateurs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../parametres/list-parametre.php">Paramètres</a>
+                <a class="nav-link" href="../admin/parametres/list-parametre.php">Paramètres</a>
             </li>
            <!-- <li class="nav-item">
                 <a class="nav-link" href="../users/list-user.php">Utilisateurs</a>
@@ -40,3 +40,4 @@
         </div>
     </div>
   </nav>
+

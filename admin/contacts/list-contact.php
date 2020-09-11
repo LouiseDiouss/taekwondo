@@ -69,12 +69,12 @@
                                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                             </a>
                                         </div>
-                                        <div class="btn-group mr-2" role="group">
+                                        <!--div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-primary" title="visualiser"
                                               data-toggle="modal" data-target="exampleModalScrollable" >
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
-                                        </div>
+                                        </div-->
 
                                     </div>
                                 </td>
@@ -90,31 +90,7 @@
     </div>
 
     
-    <!--fenêtre modale pour visualiser les infos sur un enregistrelent--->
-    <!--div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-    </div-- >
-
-
-
-
-    <!--// fin fenêtre modale pour visualiser les infos sur un enregistrelent--->
+ <!--// fin fenêtre modale pour visualiser les infos sur un enregistrelent--->
 
     <?php include '../../includes/footer.php'; ?>
     <?php include '../includes/js-admin.html'; ?>

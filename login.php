@@ -4,11 +4,12 @@
 
     // Rediriger l'utilisateur sur la page d'accueil s'il est déjà connecté...
     if (isset($_SESSION['profil'])){
-        header('location: /');
+        header('location:index.php');
     }
 
     if (isset($_POST['connexion'])){
         $email = htmlspecialchars($_POST['email']);
+        $_SESSION['email_user'] = htmlspecialchars($_POST['email']);
         $pwd = $_POST['password'];
 
         if (!empty($email) && !empty($pwd)){
