@@ -17,6 +17,8 @@
         $request->execute(array($paramSlug));
 
         $parameter = $request->fetch();
+    }else{
+        header('location: /');
     }
 
     // Traitement de la modification:

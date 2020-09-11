@@ -33,7 +33,7 @@
                     $_SESSION['nation'] = $user['nationalite'];
                     $_SESSION['naissance'] = $user['dateNaissance'];
                     $_SESSION['lieu'] = $user['lieuNaissance'];
-                    $_SESSION['adresse'] = $user['adresse'];
+                    $_SESSION['adresse'] = $user['adresse_user'];
                     $_SESSION['cp'] = $user['code_postal_user'];
                     $_SESSION['ville'] = $user['ville_user'];
                     $_SESSION['phone'] = $user['telephone_user'];

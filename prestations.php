@@ -44,7 +44,7 @@
                             </div>
                             <div class="card-footer text-center">
                                 <?php if (isset($_SESSION['profil'])){?>
-                                <button onclick="window.location.href='reserver.php?prestation=<?= $data['slug']; ?>'"
+                                <button onclick="window.location.href='reserver.php?prestation=<?= $data['slug_prest']; ?>'"
                                    class="card-link btn btn-primary">Reserver</button>
                                 <?php } else{?>
                                 <button onclick="window.location.href='login.php'"

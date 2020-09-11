@@ -47,6 +47,8 @@
                 $msg = ['warning' => 'Les champs sont obligatoires.'];
             }
         }
+    }else{
+        header('location: /');
     }
 ?>
 <!DOCTYPE html>

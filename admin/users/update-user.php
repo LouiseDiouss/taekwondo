@@ -3,7 +3,7 @@
     <div class="form-group" style="margin-top: 25px;">
         <label for="nom">Nom</label>
         <input type="text" class="form-control" placeholder="" name="nom" id="nom" required
-                value="<?php if(isset($user)) echo $user['nom_user'];?>">
+                value="<?php if(isset($userToEdit)) echo $userToEdit['nom_user'];?>">
         <div class="invalid-feedback">
             oups!!!! 
         </div>
