@@ -12,11 +12,17 @@
 	<meta charset="utf-8">
 	<title>Accueil - Taekwondo Challenge</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="keywords" content="Taekwondo challenge Nantes" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script  src="assets/js/jquery-2.1.4.min.js"></script>
 	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!--link rel="icon" type="image/x-icon" href="assets/media/images/logo.png"/-->
+	<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" property="" />
+	
 	<link rel="shortcut icon" href="assets/media/images/logo.png">
 	<?php include 'includes/css-links.html';?>
-	<!--?php include 'includes/style.css';?-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
 </head>
 <body>
 	<?php include 'includes/menu.php';?>
@@ -64,7 +70,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="/assets/media/images/logo.png" alt=" " class="img-responsive" />
+								<img src="assets/media/images/1.jpg" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->
@@ -76,7 +82,7 @@
 					<li>
 						<div class="agileits_w3layouts_banner_bottom_grid">
 							<div class="wthree_banner_bottom_grid1">
-								<img src="assets/media/images/logo.jpg" alt=" " class="img-responsive" />
+								<img src="assets/media/images/2.jpg" alt=" " class="img-responsive" />
 								<div class="agileinfo_banner_bottom_grid1_pos">
 									<h3>Challenge Taekwondo</h3>
 									<!-- <p>Donec vitae hendrerit faucibus.</p> -->
@@ -195,7 +201,86 @@
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	<!--?php include 'includes/js-links.html';?-->
+
+<!-- //custom-theme -->
+
+
+<!-- flexSlider -->
+
+	<script defer src="assets/js/jquery.flexslider.js" ></script>	
+	<script type="text/javascript">
+		$(window).on('load', function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+  </script>
+<!-- //flexSlider -->
+<!-- flexisel -->
+		<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 4,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: { 
+					portrait: { 
+						changePoint:480,
+						visibleItems: 1
+					}, 
+					landscape: { 
+						changePoint:640,
+						visibleItems:2
+					},
+					tablet: { 
+						changePoint:768,
+						visibleItems: 2
+					}
+				}
+			});
+			
+		});
+	</script>
+	
+	<script type="text/javascript" src="assets/js/move-top.js" ></script>
+	<script type="text/javascript" src="assets/js/easing.js" ></script>
+	<script type="text/javascript" src="assets/js/jquery.flexisel.js" ></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+
+
+
 
 	<!-- //bootstrap-pop-up -->
 

@@ -58,6 +58,6 @@
         </div>
     </div>
     <?php include 'includes/footer.php';?>
-    <?php include 'includes/js-links.html';?>
+    <!--s?php include 'includes/js-links.html';?-->
 </body>
 </html>

@@ -129,6 +129,6 @@
 	<!-- Pieds de page -->
 	<?php include 'includes/footer.php'; ?>
 
-	<?php include 'includes/js-links.html';?>
+	<!--?php include 'includes/js-links.html';?-->
 </body>
 </html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3b31771-cb5a-4087-aa39-cf30170c08a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/menu-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/menu-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boutique.php" beforeDir="false" afterPath="$PROJECT_DIR$/boutique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/galerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/galerie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/js-links.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/js-links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infos.php" beforeDir="false" afterPath="$PROJECT_DIR$/infos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesinfos.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesinfos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/presentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prestations.php" beforeDir="false" afterPath="$PROJECT_DIR$/prestations.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1h8pOj9qPzUOZKUMjMpQ9aVAdvN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="mesreservations.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/taekwondo/mesreservations.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.mesreservations.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3b31771-cb5a-4087-aa39-cf30170c08a1" name="Default Changelist" comment="" />
+      <created>1599402547094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599402547094</updated>
+      <workItem from="1599402550171" duration="9505000" />
+      <workItem from="1599736494592" duration="3366000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1599739839552">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599739839552" />
+  </component>
+</project>
