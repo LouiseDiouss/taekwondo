@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="includes/styleMembre.css">
     <link rel="shortcut icon" href="assets/media/images/logo.png">
 </head>
-<body>
+<body   style="background-image: url('assets/media/images/logo.png');background-size:1000px;" >
 
     <?php include 'includes/menuMembre.php';?>
-    <section style="background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:0px 5px 10px 0px;">
+    <section style="background-size:100%;color:black;text-transform: capitalize;position:relative;width:1116px;left:250px;padding:0px 5px 10px 0px; ">
     	<?php include 'includes/menu_site_Membre.php';?>
+
+    <div ></div>
     	
     </section>
     

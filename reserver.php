@@ -11,8 +11,8 @@
     if (isset($_GET['prestation']) && !is_null($_GET['prestation'])){
         $reserSlug = trim(htmlspecialchars($_GET['prestation']));
 
-        $str = 'SELECT idCours, slug, nom, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
-                FROM prestation WHERE slug = ?';
+        $str = 'SELECT idCours, slug_prest, nom_prest, categorie, jour, TIME_FORMAT(debut, "%H:%i") as debut, TIME_FORMAT(fin, "%H:%i") as fin
+                FROM prestation WHERE slug_prest = ?';
         $request = $dataBase->prepare($str);
         $request->execute(array($reserSlug));
 
@@ -88,7 +88,7 @@
                         <label for="prestation" class="col-sm-6 col-form-label">Cours : </label>
                         <div class="col-sm-6">
                             <input type="text" readonly class="form-control-plaintext" id="prestation"
-                                                       value="<?= ucfirst($reservation['nom']); ?>">
+                                                       value="<?= ucfirst($reservation['nom_prest']); ?>">
                         </div>
                     </div>
                     <div class="form-group row">

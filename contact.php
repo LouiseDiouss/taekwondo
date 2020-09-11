@@ -79,17 +79,15 @@
 	            <iframe src="https://maps.google.com/maps?q=Gymnase+Malakoff+4&center=47.21437,-1.5285&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
 	                    style="border:0;width:100%; height:485px; " allowfullscreen ></iframe>
 	        </div>
-				<!--div id="map">
-	        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1j7uPuixmwHH1wYUQaRX_xJ8TtrFkBSmH" width="800" height="485"></iframe>   
-	      </div-->
+				
 		</div>
-		<div class="col-md-5  w3l_mail_right" style="height: 485; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover; border:0;width:100%; height:485px;" >      
+		<div class="col-md-5  w3l_mail_right" style="position: relative;left:790px;bottom:490px;height: 485;margin-left: 0px;" >      
 			<h3>Nos Coordonnées</h3>
 			<ul>
-				<li><span><i class="fa fa-home" aria-hidden="true"></i>Siège Social<label>:</label></span> 4 rue Laurent Bonnevay, Nantes, 44200</li>
-				<li><span><i class="fa fa-home" aria-hidden="true"></i>Gymnase<label>:</label></span> esplanade d'angleterre, Nantes, 44100</li>
-				<li><span><i class="fa fa-phone" aria-hidden="true"></i>Tel<label>:</label></span> (+33) 621466467</li>
-				<li><span><i class="fa fa-envelope" aria-hidden="true"></i>Email<label>:</label></span> <a href="mailto:taekwondochallenge.44@gmail.com">taekwondochallenge.44@gmail.com</a></li>
+				<li><span><i class="fa fa-home" aria-hidden="true"></i>Siège Social<label>:</label></span> <?php if (isset($appParameters)) print $appParameters['ets_siege_social'];?></li>
+				<li><span><i class="fa fa-home" aria-hidden="true"></i>Gymnase<label>:</label></span> <?php if (isset($appParameters)) print $appParameters['ets_adresse'];?>, 44100 Nantes</li>
+				<li><span><i class="fa fa-phone" aria-hidden="true"></i>Tel<label>:</label></span> <?php if (isset($appParameters)) print $appParameters['ets_telephone'];?></li>
+				<li><span><i class="fa fa-envelope" aria-hidden="true"></i>Email<label>:</label></span><a href="mailto:<?php if (isset($appParameters)) print $appParameters['ets_email'];?>">Taekwondochallenge.44@gmail.com</a></li>
 				<li><span><i class="fa fa-globe" aria-hidden="true"></i>Website<label>:</label></span> <a href="https://w3layouts.com/"><!-- http://karatew3layouts.com --></a></li>
 			</ul>
 		</div>

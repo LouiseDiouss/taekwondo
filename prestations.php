@@ -25,12 +25,7 @@
     </div>
     <div class="container mt-0 mb-5">
         <div class="row">
-            <!--div class="row mb-3">
-                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="text-center">NOS COURS</h2>
-                </div>
-            </div>
-            <br-->
+            
             <div class="row mt-0">
                 <!--<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">-->
                     <?php while ($data = $response->fetch()) { ?>
@@ -44,7 +39,7 @@
                             </div>
                             <div class="card-footer text-center">
                                 <?php if (isset($_SESSION['profil'])){?>
-                                <button onclick="window.location.href='reserver.php?prestation=<?= $data['slug']; ?>'"
+                                <button onclick="window.location.href='reserver.php?prestation=<?= $data['slug_prest']; ?>'"
                                    class="card-link btn btn-primary">Reserver</button>
                                 <?php } else{?>
                                 <button onclick="window.location.href='login.php'"
@@ -53,7 +48,7 @@
                             </div>
                         </div>
                     <?php } ?>
-               <!-- </div>-->
+              
             </div>
         </div>
     </div>
