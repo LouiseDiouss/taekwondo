@@ -1,3 +1,4 @@
 ###> Fichier a ignorer lors du commit ###
 /.idea/
 /proccess/config.php
+proccess/config.php

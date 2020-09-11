@@ -1,23 +1,29 @@
 <?php
+    session_start();
+
+    // Controle d'accèss...
+    if (isset($_SESSION['profil'])){
+        if(strcmp($_SESSION['profil'], 'ROLE_ADMIN') != 0){
+            header('location: /');
+        }
+    }else{
+        header('location: /');
+    }
     require_once '../../proccess/config.php';
 
-    $str = 'SELECT * FROM user ORDER BY idUser';
+    $str = 'SELECT * FROM user ORDER BY est_active_user DESC';
 
     $response = $dataBase->query($str);
-
-
-   
-    
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Liste des utilisateurs</title>
+    <title>Liste des membres - Taekwondo Challenge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <?php include '../../includes/css-links.html'?>
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html'?>
+    <!--<link rel="shortcut icon" href="../../assets/media/images/logo.png">-->
 
     <link rel="stylesheet" href="../../includes/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
@@ -44,46 +50,36 @@
                         <th scope="col" colspan="16" class="cours" style="background-color: grey;">Liste des Membres</th>
                    
                     </tr>
-                     
                         <tr>
-                            <!--th>IdUser</th-->
+                            <th>Etat compte</th>
                             <th>Nom</th>
                             <th>Prénom</th>
-                            <!--th>Date et Lieu de Naissance</th-->
-                            <th>Sexe</th>
                             <th>Adresse</th>
-                            <!--th>Code Postal</th>
-                            <th>Ville</th>
-                            <th>Nationalité</th-->
                             <th>Email</th>
                             <th>Tél</th>
-                            <th>Tél Responsable</th>
-                            <!--th>Licence Sportive</th>
-                            <th>Passeport Sportif</th-->
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
                             <?php while ($data = $response->fetch()) { ?>
                             <tr>
-                                
+                                <td>
+                                    <?php if($data['est_active_user'])
+                                        print '<i class="fa fa-circle" aria-hidden="true" style="color: green"></i>'.' Actif';
+                                    else print '<i class="fa fa-circle" aria-hidden="true" style="color: red"></i>'.' Inactif' ?>
+                                </td>
                                 <td><?= $data['nom_user'] ?></td>
                                 <td><?= $data['prenom_user'] ?></td>
-                                <!--td><?= $data['dateNaissance'].' '.$data['lieuNaissance'] ?> </td-->
-                                <td><?= $data['sexe'] ?></td>
                                 <td><?= $data['adresse_user'] . ' '.$data['code_postal_user'].' '.$data['ville_user'] ?></td>
                                 <td><?= $data['email_user'] ?></td>
                                 <td><?= $data['telephone_user']  ?></td>
-                                <td><?= $data['telResponsable'] ?></td>
-                                <!--td><?= $data['numLicence'] ?></td>
-                                <td><?= $data['passeportSportif'] ?></td-->
                                 <!-- Les buttons d'actions -->
                                 <td>
                                     <div class="btn-toolbar" role="toolbar" aria-label="">
-                                        <?php if ($data['est_active_user'] == false) { ?>
+                                        <?php if (!$data['est_active_user']) { ?>
                                             <div class="btn-group mr-2" role="group">
                                                 <a role="button" class="btn btn-warning" title="Modifier"
-                                                   href="edit-user.php?user=<?= $data['slug_user'] ?>">
+                                                   href="edit-user.php?userId=<?= $data['slug_user'] ?>">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -92,7 +88,7 @@
                                         
                                         <div class="btn-group mr-2" role="group">
                                             <a role="button" class="btn btn-info" title="InfosMembre"
-                                               href="infos-membre.php?user=<?= $data['slug_user'] ?>"  >
+                                               href="infos-user.php?userId=<?= $data['slug_user'] ?>"  >
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </a>
                                         </div>
@@ -113,7 +109,7 @@
 
     <!-- Modal de confirmation de désactivation -->
     <!-- Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <!--<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -134,12 +130,12 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Fin modal de confirmation de désactivation -->
 
     <!-- Modal de confirmation d'activation -->
     <!-- Modal -->
-    <div class="modal fade" id="activationModal" tabindex="-1" role="dialog" aria-labelledby="activationModalLabel" aria-hidden="true">
+    <!--<div class="modal fade" id="activationModal" tabindex="-1" role="dialog" aria-labelledby="activationModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -160,12 +156,12 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Fin modal de confirmation de désactivation -->
 
     <?php include '../../includes/footer.php'; ?>
-    <?php include '../../includes/js-links.html'; ?>
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <?php include '../includes/js-admin.html'; ?>
+    <!--<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script>
         function getDisId(id) {
             document.getElementById('prest-dis-slug').value = id;
@@ -178,6 +174,6 @@
         $(document).ready( function () {
             $('#prestations-list').DataTable();
         } );
-    </script>
+    </script>-->
 </body>
 </html>
