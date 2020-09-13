@@ -71,19 +71,6 @@
                                                        value="<?= reservationNumber(); ?>">
                         </div>
                     </div>
-                    <!--<div class="row">
-                        <div class="col-md-12">
-                            <table>
-                                <tr>
-                                    <td style="padding-right: 140px;">Cours </td><td>: <?/*= ucfirst($reservation['nom']); */?></td>
-                                </tr>
-                            </table>
-                            <p style="">Cours : <?/*= ucfirst($reservation['nom']); */?></p>
-                            <p>Catégorie : <?/*= ucfirst($reservation['categorie']); */?></p>
-                            <p>Jour : <?/*= ucfirst($reservation['jour']); */?></p>
-                            <p>Heure : <?/*= $reservation['debut']; */?> à <?/*= $reservation['fin']; */?></p>
-                        </div>
-                    </div>-->
                     <div class="form-group row">
                         <label for="prestation" class="col-sm-6 col-form-label">Cours : </label>
                         <div class="col-sm-6">
