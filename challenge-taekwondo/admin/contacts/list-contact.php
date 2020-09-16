@@ -1,5 +1,6 @@
 <?php
-    require_once '../../proccess/config.php';
+    session_start();
+    require_once '../../../proccess/config.php';
 
     $str = 'SELECT * FROM contact ORDER BY dateContact DESC';
 
@@ -13,9 +14,9 @@
     <meta charset="UTF-8">
     <title>Liste des contacts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <?php include '../../includes/css-links.html'?>
-    <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html' ?>
+    <link rel="stylesheet" href="../../../includes/style.css">
+    <!--<link rel="shortcut icon" href="../../../assets/media/images/logo.png">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap4.min.css">
@@ -92,7 +93,7 @@
     
  <!--// fin fenêtre modale pour visualiser les infos sur un enregistrelent--->
 
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../../includes/footer.php'; ?>
     <?php include '../includes/js-admin.html'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>

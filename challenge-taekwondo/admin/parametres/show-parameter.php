@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     if (isset($_GET['parameter']) && !empty($_GET['parameter'])){
         $paramSlug = $_GET['parameter'];
@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Détails des paramètres - Taekwondo Challenge</title>
     <?php include '../includes/css-admin.html';?>
-    <link rel="shortcut icon" href="../assets/media/images/logo.png">
+
 </head>
 <body>
     <?php include '../includes/menu-admin.php';?>

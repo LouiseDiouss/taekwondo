@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../proccess/config.php';
+    require_once '../../proccess/config.php';
 
     if (isset($_SESSION['profil'])){
         if ($_SESSION['profil'] == 'ROLE_ADMIN') {
@@ -13,7 +13,7 @@
     }
 
     if (isset($_POST['connexion'])){
-        $email = htmlspecialchars($_POST['email']);
+        $email = trim(htmlspecialchars($_POST['email']));
         $pwd = $_POST['password'];
 
         if (!empty($email) && !empty($pwd)){
@@ -36,7 +36,7 @@
 
                     $dataBase->prepare("UPDATE admin SET last_login = NOW() WHERE slug = ?")->execute([$admin['slug']]);
 
-                    header('Location: accueil.php');
+                    header('Location: admin/accueil.php');
 
                 } else {
                     $msg = array('danger' => 'Email et/ou mot de passe incorrects.');
@@ -57,8 +57,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Administration - Taekwondo Challenge</title>
-    <?php include './../includes/css-links.html';?>
-    <link rel="shortcut icon" href="../assets/media/images/logo.png">
+    <?php include 'includes/css-admin.html';?>
+    <!--<link rel="shortcut icon" href="../../assets/media/images/logo.png">-->
 
 </head>
 <body>
@@ -68,7 +68,7 @@
             <!--<div class="col-md-1">-- Colonne gauche --</div>-->
             <div class="col-md-4 ml-auto mr-auto mt-md-5" style="box-shadow: 10px 10px 10px grey; background-color: #F4F1F1">
                 <h2 class="text-center mb-4 mt-2">Connexion</h2>
-                <?php include '../includes/form-login.php';?>
+                <?php include '../../includes/form-login.php';?>
             </div>
             <!--<div class="col-md-1"> Colonne droite </div>-->
         </div>

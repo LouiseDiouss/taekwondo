@@ -1,14 +1,8 @@
-
-
-<?php 
-
-
+<?php
     session_start();
 	
 	require 'proccess/config.php';
 	require_once 'proccess/mailer.php';
-
-	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['contact']))
 	{
@@ -43,10 +37,6 @@
 	        	['warning' => 'Tous les champs sont obligatoires'];
 	        }
 	 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>

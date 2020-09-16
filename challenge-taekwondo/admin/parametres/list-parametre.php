@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     $str = 'SELECT * FROM parametres ORDER BY ets_est_active = true DESC';
     $activeParam = 'SELECT ets_nom, ets_est_active FROM parametres WHERE ets_est_active = true';
@@ -24,9 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Liste des paramètres - Taekwondo Challenge</title>
     <?php include '../includes/css-admin.html';?>
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap4.min.css">
 </head>

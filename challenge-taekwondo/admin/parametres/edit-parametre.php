@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     if (isset($_GET['parameter']) && !empty($_GET['parameter'])){
         $paramSlug = $_GET['parameter'];
@@ -67,8 +67,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Modifier un paramètre - Taekwondo Challenge</title>
     <?php include '../includes/css-admin.html';?>
-    <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <link rel="stylesheet" href="../../../includes/style.css">
+
 </head>
 <body>
     <?php include '../includes/menu-admin.php';?>
@@ -96,7 +96,7 @@
             </form>
         </div>
     </div>
-    <?php include '../../includes/footer.php';?>
+    <?php include '../../../includes/footer.php';?>
     <?php include '../includes/js-admin.html';?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">

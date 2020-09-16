@@ -10,7 +10,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
    if (isset($_GET['userId']) && !empty($_GET['userId']))
    {
@@ -37,8 +37,8 @@
         <meta charset="UTF-8">
         <title>Détails membre - Taekwondo Challenge</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <?php include '../includes/css-admin.html'?>
-        <link rel="stylesheet" href="../../includes/style.css">
+        <?php include '../includes/css-admin.html' ?>
+        <link rel="stylesheet" href="../../../includes/style.css">
     </head>
     <body>
         <?php include '../includes/menu-admin.php'; ?>
@@ -93,7 +93,7 @@
             </div>
             <?php } ?>
         </div>
-        <?php include '../../includes/footer.php'; ?>
+        <?php include '../../../includes/footer.php'; ?>
         <?php include '../includes/js-admin.html'; ?>
     </body>
 </html>
