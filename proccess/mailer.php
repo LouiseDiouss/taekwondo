@@ -29,9 +29,9 @@
 
         //=====Création du header du mail.
 
-        $header = "From: \"Taekwondo Challenge\"<devs.tool@gmail.com>".$passage_ligne;//Expéditeur
+        $header = "From: \"Taekwondo Challenge\"<ne-pas-repondre@taekwondo-challenge.fr>".$passage_ligne;//Expéditeur
 
-        $header.= "Reply-to: \"Taekwondo Challenge\"<devs.tool@gmail.com>".$passage_ligne;//Adresse de réponse
+        $header.= "Reply-to: \"Taekwondo Challenge\"<ne-pas-repondre@taekwondo-challenge.fr>".$passage_ligne;//Adresse de réponse
 
         $header.= "MIME-Version: 1.0".$passage_ligne;
 
