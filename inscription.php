@@ -1,7 +1,8 @@
-<?php 
+<?php
+    session_start();
+    if (isset($_SESSION['profil'])){ header('location: /');}
 	require 'proccess/config.php';
 	require_once 'proccess/mailer.php';
-
 
 	if (isset($_POST['demandeInscription'])){
 	    $nom = htmlspecialchars($_POST['nom']);
