@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     if (isset($_POST['add-prest'])){
         $prest = htmlspecialchars($_POST['nom-prestation']);
@@ -36,13 +36,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajouter une prestation</title>
-    <?php include '../../includes/css-links.html'; ?>
-     <link rel="stylesheet" href="../../includes/style.css">
-     <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html'; ?>
+     <link rel="stylesheet" href="../../../includes/style.css">
+
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>
-    <?php //include ROOT.'/includes/menu.php'; ?>
     <div class="container">
         <div class="row mt-5 mb-5">
             <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
@@ -70,8 +69,8 @@
             <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2"></div>
         </div>
     </div>
-    <?php include '../../includes/footer.php'; ?>
-    <?php include '../../includes/js-links.html'; ?>
+    <?php include '../../../includes/footer.php'; ?>
+    <?php include '../includes/js-admin.html'; ?>
 
 </body>
 </html>

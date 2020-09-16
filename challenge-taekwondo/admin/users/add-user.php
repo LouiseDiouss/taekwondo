@@ -10,8 +10,8 @@
         header('location: /');
     }
 
-    require '../../proccess/config.php';
-    require_once '../../proccess/mailer.php';
+    require '../../../proccess/config.php';
+    require_once '../../../proccess/mailer.php';
 
     //$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
@@ -77,9 +77,8 @@
     <meta charset="UTF-8">
     <title>Ajouter un Membre</title>
     <?php include '../includes/css-admin.html'; ?>
-     <link rel="shortcut icon" href="../../assets/media/images/logo.png">
 
-    <link rel="stylesheet" href="../../includes/style.css">
+    <link rel="stylesheet" href="../../../includes/style.css">
 </head>
 <body>
     <?php include '../includes/menu-admin.php'; ?>
@@ -100,7 +99,7 @@
             </p>
             <?php }?>
             <form method="post">
-                <?php include '../../includes/form-inscription.php';?>
+                <?php include '../../../includes/form-inscription.php';?>
                 <!--div class="form-group mt-3">
                     <button class="btn btn-success" type="submit" name="add-prest">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -110,7 +109,7 @@
             </form>
         </div>
     </div>
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../../includes/footer.php'; ?>
     <?php include '../includes/js-admin.html'; ?>
 
 </body>

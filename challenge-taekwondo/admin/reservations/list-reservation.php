@@ -1,14 +1,8 @@
 <?php
     session_start();
-    require_once '../../proccess/config.php';
-    /*$token = base64_encode(openssl_random_pseudo_bytes(32));
-    echo 'token 1 : ',$token;
-
-    $token2 = substr(md5(uniqid()),0 ,32);
-    echo ' token 2: ',$token2;*/
+    require_once '../../../proccess/config.php';
 
     $request = $dataBase->query('SELECT * FROM reserver');
-    //$response = $request->fetch();
 
 ?>
 <!DOCTYPE html>
@@ -17,9 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Liste des réservations</title>
-    <?php include '../../includes/css-links.html'?>
-    <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html'?>
+    <link rel="stylesheet" href="../../../includes/style.css">
+    <!--<link rel="shortcut icon" href="../../assets/media/images/logo.png">-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
@@ -56,8 +50,8 @@
             </table>
         </div>
     </div>
-     <?php include '../../includes/footer.php'; ?>
-    <!--?php include '../../includes/js-links.html'; ?-->
+     <?php include '../../../includes/footer.php'; ?>
+       <?php include '../includes/js-admin.html';?>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 </body>
 </html>

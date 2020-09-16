@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     if (!empty(isset($_GET['prestation']))){
         $slug = $_GET['prestation'];
@@ -49,9 +49,8 @@
         <meta charset="UTF-8">
         <title>Modifier une prestation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <?php include '../../includes/css-links.html'?>
-        <link rel="stylesheet" href="../../includes/style.css">
-        <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+        <?php include '../includes/css-admin.html' ?>
+        <link rel="stylesheet" href="../../../includes/style.css">
     </head>
     <body>
         <?php include '../includes/menu-admin.php'; ?>
@@ -82,7 +81,7 @@
                 <div class="col-md-2"></div>
             </div>
         </div>
-        <?php include '../../includes/footer.php'; ?>
-        <?php include '../../includes/js-links.html'; ?>
+        <?php include '../../../includes/footer.php'; ?>
+        <?php include '../includes/js-admin.html'; ?>
     </body>
 </html>

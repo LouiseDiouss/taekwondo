@@ -1,8 +1,8 @@
-<?php 
-	require '../proccess/config.php';
-	require_once '../proccess/mailer.php';
+<?php
+    session_start();
+	require '../../proccess/config.php';
+	require_once '../../proccess/mailer.php';
 
-	$host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
 	if (isset($_POST['demandeInscription'])){
 	   
@@ -55,9 +55,9 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Devenir membre - Taekwondo Challenge</title>
-	<?php include '../includes/css-links.html';?>
-    <link rel="stylesheet" href="../includes/style.css">
-    <link rel="shortcut icon" href="../assets/media/images/logo.png">
+	<?php include 'includes/css-admin.html';?>
+    <link rel="stylesheet" href="../../includes/style.css">
+
 	<!--?php include 'includes/style.css';?-->
 </head>
 <body>
@@ -70,13 +70,13 @@
                     <?=$msg[key($msg)]?>
                 </p>
             <?php }?>
-			<?php include 'includes/_form-password.php'; ?>
+			<?php include '../../includes/_form-password.php'; ?>
 		</div>
 
 	<!-- formulaire d'inscription -->
 	<!-- Pieds de page -->
-	<?php include '../includes/footer.php'; ?>
+	<?php include '../../includes/footer.php'; ?>
 
-	<?php include '../includes/js-links.html';?>
+	<?php include 'includes/js-admin.html';?>
 </body>
 </html>

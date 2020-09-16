@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     $str = 'SELECT * FROM prestation ORDER BY est_active_prest = true DESC';
 
@@ -44,9 +44,9 @@
     <meta charset="UTF-8">
     <title>Liste des prestations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <?php include '../includes/css-admin.html'?>
-    <link rel="stylesheet" href="../../includes/style.css">
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html' ?>
+    <link rel="stylesheet" href="../../../includes/style.css">
+
     <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap4.min.css">
@@ -197,7 +197,7 @@
     </div>
     <!-- Fin modal de confirmation de désactivation -->
 
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../../includes/footer.php'; ?>
     <?php include '../includes/js-admin.html'; ?>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>

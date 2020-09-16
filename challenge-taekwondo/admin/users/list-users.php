@@ -9,7 +9,7 @@
     }else{
         header('location: /');
     }
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     $str = 'SELECT * FROM user ORDER BY est_active_user DESC';
 
@@ -22,10 +22,10 @@
     <meta charset="UTF-8">
     <title>Liste des membres - Taekwondo Challenge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <?php include '../includes/css-admin.html'?>
+    <?php include '../includes/css-admin.html' ?>
     <!--<link rel="shortcut icon" href="../../assets/media/images/logo.png">-->
 
-    <link rel="stylesheet" href="../../includes/style.css">
+    <link rel="stylesheet" href="../../../includes/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
@@ -106,74 +106,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal de confirmation de désactivation -->
-    <!-- Modal -->
-    <!--<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">Confirmation de désactivation</h5>
-                </div>
-                <form method="post">
-                    <div class="modal-body">
-                        <input type="hidden" name="prest-dis-slug" id="prest-dis-slug"/>
-                        <p>
-                            Êtes-vous sûr de vouloir désactiver cette prestation ?<br/>
-                            Elle ne figurera plus dans la liste des prestations visibles par vos visiteurs.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" name="confirm-dis">Oui</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>-->
-    <!-- Fin modal de confirmation de désactivation -->
-
-    <!-- Modal de confirmation d'activation -->
-    <!-- Modal -->
-    <!--<div class="modal fade" id="activationModal" tabindex="-1" role="dialog" aria-labelledby="activationModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="activationModalLabel">Confirmation d'activation</h5>
-                </div>
-                <form method="post">
-                    <div class="modal-body">
-                        <input type="hidden" name="prest-en-slug" id="prest-en-slug"/>
-                        <p class="text-center">
-                            Êtes-vous sûr de vouloir activer cette prestation ?<br/>
-                            Elle figurera dans la liste des prestations visibles par vos visiteurs.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" name="confirm-en">Oui</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>-->
-    <!-- Fin modal de confirmation de désactivation -->
-
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../../includes/footer.php'; ?>
     <?php include '../includes/js-admin.html'; ?>
-    <!--<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script>
-        function getDisId(id) {
-            document.getElementById('prest-dis-slug').value = id;
-        }
-
-        function getEnId(id) {
-            document.getElementById('prest-en-slug').value = id;
-        }
-
-        $(document).ready( function () {
-            $('#prestations-list').DataTable();
-        } );
-    </script>-->
 </body>
 </html>

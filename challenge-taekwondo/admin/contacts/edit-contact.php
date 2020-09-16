@@ -1,8 +1,8 @@
 <?php
-    require_once '../../proccess/config.php';
-    require_once '../../proccess/mailer.php';
+    session_start();
+    require_once '../../../proccess/config.php';
+    require_once '../../../proccess/mailer.php';
 
-    $host = $_SERVER['SERVER_NAME'].':'. $_SERVER['SERVER_PORT'];
 
     if (!empty(isset($_GET['contact'])))
     {
@@ -41,14 +41,6 @@
 
                 header('location:list-contact.php');
 
-
-              /*echo '<script type="text/javascript">
-                        alert("Votre reponse  N° '.$contact['slug'].' a bien ete envoye");
-                    </script>';
-
-              echo '<SCRIPT LANGUAGE="JavaScript">
-                            document.location.href="list-contact.php"
-                    </SCRIPT>';*/
             }else{
                 $msg = ['danger' => 'Une erreur s\'est produite.'];
             }
@@ -63,13 +55,13 @@
         <meta charset="UTF-8">
         <title>Réponse à un contact</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <?php include '../../includes/css-links.html'?>
-        <link rel="stylesheet" href="../../includes/style.css">
-        <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+        <?php include '../../../includes/css-links.html' ?>
+        <link rel="stylesheet" href="../../../includes/style.css">
+        <!--<link rel="shortcut icon" href="../../../assets/media/images/logo.png">-->
 
     </head>
     <body>
-        <?php include '../../includes/menu.php'; ?>
+        <?php include '../includes/menu-admin.php'; ?>
         <div class="container">
             <div class="row mt-5 mb-5">
                 <div class="col-md-2">
@@ -97,10 +89,7 @@
                 <div class="col-md-2"></div>
             </div>
         </div>
-        <?php include '../../includes/footer.php'; ?>
-        <?php include '../../includes/js-links.html'; ?>
+        <?php include '../../../includes/footer.php'; ?>
+        <?php include '../includes/js-admin.html'; ?>
     </body>
 </html>
-
-<?php //print $contact['slug'].'et id = '.$contact['idContact'];?>
-<?php //print_r($contact['slug']);?>

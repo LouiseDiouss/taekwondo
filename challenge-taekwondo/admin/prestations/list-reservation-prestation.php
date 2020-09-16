@@ -6,7 +6,7 @@
         header('location: /');
     }
 
-    require_once '../../proccess/config.php';
+    require_once '../../../proccess/config.php';
 
     $str = 'SELECT * FROM reserver AS reserve, prestation AS prestation, user AS user 
             WHERE reserve.idCours = prestation.idCours AND reserve.idUser = user.idUser';
@@ -22,8 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Liste des reservation sur la prestation - Taekwondo Challenge</title>
-    <?php include '../../includes/css-links.html';?>
-    <link rel="shortcut icon" href="../../assets/media/images/logo.png">
+    <?php include '../includes/css-admin.html';?>
 </head>
 <body>
     <?php include '../includes/menu-admin.php';?>
@@ -57,6 +56,6 @@
         </table>
     </div>
 
-    <?php include '../../includes/js-links.html';?>
+    <?php include '../includes/js-admin.html';?>
 </body>
 </html>
